@@ -1,0 +1,870 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Group Reflection | Tinashe Motshubi</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #fffdf8;
+      --paper: #ffffff;
+      --purple: #7852a9;
+      --purple-dark: #573a80;
+      --lilac: #eee5fa;
+      --blue: #e8f2fb;
+      --yellow: #fff4c9;
+      --silver: #e7e3ec;
+      --text: #393343;
+      --muted: #777181;
+      --shadow: 0 12px 35px rgba(84, 61, 112, 0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--text);
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.75;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .top-strip {
+      height: 6px;
+      background: linear-gradient(
+        90deg,
+        #bca1e6,
+        #d9c8f0,
+        #c6dfef,
+        #f5e4a9,
+        #bca1e6
+      );
+    }
+
+    header {
+      background: rgba(255, 253, 248, 0.96);
+      border-bottom: 1px solid var(--silver);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .brand {
+      font-family: "Playfair Display", serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--purple-dark);
+      white-space: nowrap;
+    }
+
+    .brand span {
+      color: #ad8bd5;
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 1px solid var(--silver);
+      background: white;
+      color: var(--purple-dark);
+      padding: 8px 12px;
+      border-radius: 10px;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 7px;
+    }
+
+    nav a {
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 8px 10px;
+      border-radius: 30px;
+      transition: 0.25s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: var(--lilac);
+      color: var(--purple-dark);
+    }
+
+    .hero {
+      max-width: 1200px;
+      margin: auto;
+      padding: 85px 6% 65px;
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: var(--yellow);
+      padding: 7px 15px;
+      border-radius: 30px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Playfair Display", serif;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      letter-spacing: -2px;
+      color: var(--purple-dark);
+      margin-bottom: 24px;
+    }
+
+    h1 em {
+      color: #a585ce;
+      font-weight: 500;
+    }
+
+    .hero-description {
+      color: var(--muted);
+      max-width: 630px;
+      font-size: 1.04rem;
+      margin-bottom: 28px;
+    }
+
+    .hero-note {
+      background: var(--lilac);
+      border: 1px solid #e2d3f5;
+      border-radius: 24px;
+      padding: 32px;
+      transform: rotate(2deg);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-note .quote-mark {
+      font-family: "Playfair Display", serif;
+      font-size: 4rem;
+      line-height: 1;
+      color: #a585ce;
+    }
+
+    .hero-note p {
+      font-family: "Playfair Display", serif;
+      font-size: 1.35rem;
+      color: var(--purple-dark);
+      margin: 8px 0 18px;
+    }
+
+    .hero-note small {
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .section {
+      padding: 70px 6%;
+    }
+
+    .section-inner {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 42px;
+    }
+
+    .section-heading .mini-label {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--purple);
+    }
+
+    .section-heading h2 {
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      color: var(--purple-dark);
+      margin: 12px 0 16px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    .stages {
+      background: #f7f2fc;
+    }
+
+    .stage-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .stage-card {
+      background: var(--paper);
+      padding: 30px;
+      border: 1px solid var(--silver);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stage-card::before {
+      content: "";
+      display: block;
+      height: 5px;
+      width: 65px;
+      border-radius: 10px;
+      background: var(--accent, #bca1e6);
+      margin-bottom: 22px;
+    }
+
+    .stage-card:last-child {
+      grid-column: 1 / -1;
+    }
+
+    .stage-number {
+      color: #a18abf;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .stage-card h3 {
+      color: var(--purple-dark);
+      font-size: 1.65rem;
+      margin: 9px 0 14px;
+    }
+
+    .stage-card p {
+      color: var(--muted);
+      font-size: 0.94rem;
+      margin-bottom: 13px;
+    }
+
+    .reflection-prompt {
+      border-left: 3px solid var(--accent, #bca1e6);
+      padding: 12px 15px;
+      background: #fbf9fe;
+      border-radius: 0 12px 12px 0;
+      color: var(--text);
+      font-size: 0.9rem;
+    }
+
+    .reflection-prompt strong {
+      color: var(--purple-dark);
+    }
+
+    .forming {
+      --accent: #bca1e6;
+    }
+
+    .storming {
+      --accent: #f0d98a;
+    }
+
+    .norming {
+      --accent: #a9d0e9;
+    }
+
+    .performing {
+      --accent: #c9b2e8;
+    }
+
+    .adjourning {
+      --accent: #c7c3d2;
+    }
+
+    .learning-section {
+      background: var(--cream);
+    }
+
+    .learning-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .learning-card {
+      background: white;
+      border: 1px solid var(--silver);
+      border-radius: 20px;
+      padding: 26px;
+    }
+
+    .learning-card .symbol {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      background: var(--blue);
+      border-radius: 15px;
+      font-size: 1.35rem;
+      margin-bottom: 18px;
+    }
+
+    .learning-card h3 {
+      font-size: 1.3rem;
+      color: var(--purple-dark);
+      margin-bottom: 10px;
+    }
+
+    .learning-card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .personal-growth {
+      background: var(--blue);
+    }
+
+    .growth-panel {
+      max-width: 900px;
+      margin: auto;
+      padding: 42px;
+      background: white;
+      border-radius: 26px;
+      border: 1px solid #d8e6f3;
+      box-shadow: var(--shadow);
+    }
+
+    .growth-panel h2 {
+      color: var(--purple-dark);
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+
+    .growth-panel p {
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .growth-list {
+      list-style: none;
+      margin-top: 24px;
+    }
+
+    .growth-list li {
+      padding: 13px 0 13px 34px;
+      border-bottom: 1px solid #eeeaf3;
+      position: relative;
+      color: var(--text);
+    }
+
+    .growth-list li::before {
+      content: "✦";
+      position: absolute;
+      left: 4px;
+      color: var(--purple);
+    }
+
+    .honesty-note {
+      margin-top: 24px;
+      padding: 18px 20px;
+      background: var(--yellow);
+      border-radius: 14px;
+      font-size: 0.9rem;
+      color: #67552a;
+    }
+
+    .closing {
+      text-align: center;
+      padding: 85px 6%;
+    }
+
+    .closing h2 {
+      color: var(--purple-dark);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      margin-bottom: 18px;
+    }
+
+    .closing p {
+      max-width: 680px;
+      margin: auto;
+      color: var(--muted);
+    }
+
+    .back-top {
+      display: inline-block;
+      margin-top: 28px;
+      background: var(--purple);
+      color: white;
+      padding: 12px 23px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      transition: 0.25s;
+    }
+
+    .back-top:hover {
+      background: var(--purple-dark);
+      transform: translateY(-2px);
+    }
+
+    footer {
+      border-top: 1px solid var(--silver);
+      text-align: center;
+      padding: 28px 6%;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    footer span {
+      color: var(--purple);
+      font-weight: 700;
+    }
+
+    @media (max-width: 850px) {
+      .nav-container {
+        flex-wrap: wrap;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      nav.open {
+        display: flex;
+      }
+
+      nav a {
+        padding: 10px 13px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding-top: 60px;
+      }
+
+      .hero-note {
+        max-width: 550px;
+      }
+
+      .learning-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .stage-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stage-card:last-child {
+        grid-column: auto;
+      }
+
+      .section {
+        padding: 55px 6%;
+      }
+
+      .growth-panel {
+        padding: 26px 22px;
+      }
+
+      h1 {
+        letter-spacing: -1px;
+      }
+    }
+
+    @media print {
+      header,
+      .back-top,
+      .top-strip,
+      .menu-toggle {
+        display: none !important;
+      }
+
+      body {
+        background: white;
+      }
+
+      .hero,
+      .section,
+      .closing {
+        padding: 25px 0;
+      }
+
+      .stage-card,
+      .learning-card,
+      .growth-panel {
+        box-shadow: none;
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top-strip"></div>
+
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="brand">Tinashe<span>.</span></a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        ☰ Menu
+      </button>
+
+      <nav id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="cv.html">CV</a>
+        <a href="individual-reflection.html">Individual Reflection</a>
+        <a href="group-reflection.html" class="active">Group Reflection</a>
+        <a href="skills-projects.html">Skills & Projects</a>
+        <a href="application-letter.html">Application Letter</a>
+        <a href="email-template.html">Email Template</a>
+        <a href="study-resources.html">Study Resources</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <span class="eyebrow">Learning Together · Growing Together</span>
+
+        <h1>Better <em>Together.</em></h1>
+
+        <p class="hero-description">
+          Group work is more than dividing tasks and completing an assignment.
+          It is an opportunity to learn how people communicate, manage
+          differences, share responsibility and work towards a common goal.
+          This reflection explores group development through Tuckman's five
+          stages and what I can learn from the process.
+        </p>
+      </div>
+
+      <aside class="hero-note">
+        <div class="quote-mark">“</div>
+        <p>
+          Collaboration is not about thinking the same way. It is about
+          learning how to move forward together.
+        </p>
+        <small>MY GROUP-WORK PHILOSOPHY</small>
+      </aside>
+    </section>
+
+    <section class="section stages">
+      <div class="section-inner">
+        <div class="section-heading">
+          <span class="mini-label">The Reflection</span>
+          <h2>Five Stages of Group Development</h2>
+          <p>
+            Psychologist Bruce Tuckman's model explains how groups can
+            develop from their first meeting into teams that work together
+            effectively. Each stage presents different experiences and
+            opportunities for growth.
+          </p>
+        </div>
+
+        <div class="stage-grid">
+          <article class="stage-card forming">
+            <span class="stage-number">Stage 01 · Getting Started</span>
+            <h3>Forming</h3>
+
+            <p>
+              The forming stage is when group members first come together,
+              get to know one another and begin to understand the task.
+              Members may be polite and enthusiastic, but they may also be
+              uncertain about their responsibilities and how the group will
+              operate.
+            </p>
+
+            <p>
+              At this stage, I recognise the importance of listening,
+              introducing ideas respectfully and understanding what the
+              assignment requires. Getting to know the people I am working
+              with can help build trust and make communication easier.
+            </p>
+
+            <div class="reflection-prompt">
+              <strong>My reflection:</strong> I should consider how our group
+              was formed, whether we knew each other beforehand and how we
+              initially shared ideas and responsibilities.
+            </div>
+          </article>
+
+          <article class="stage-card storming">
+            <span class="stage-number">Stage 02 · Facing Differences</span>
+            <h3>Storming</h3>
+
+            <p>
+              During storming, differences in opinions, working styles,
+              availability or expectations may become more noticeable.
+              Members might disagree about ideas or how to divide the work.
+              These challenges do not automatically mean that a group is
+              failing.
+            </p>
+
+            <p>
+              I understand that disagreements should be handled with patience
+              and respect. Instead of taking different opinions personally,
+              group members can explain their reasoning, listen to one
+              another and focus on finding a solution that supports the
+              shared objective.
+            </p>
+
+            <div class="reflection-prompt">
+              <strong>My reflection:</strong> I should describe a real
+              challenge we experienced, how it affected our work and what
+              we actually did to address it.
+            </div>
+          </article>
+
+          <article class="stage-card norming">
+            <span class="stage-number">Stage 03 · Finding Our Rhythm</span>
+            <h3>Norming</h3>
+
+            <p>
+              In the norming stage, a group begins to establish shared
+              expectations, routines and a stronger sense of responsibility.
+              Members become more familiar with their roles and learn how
+              to coordinate their contributions.
+            </p>
+
+            <p>
+              Clear communication, agreed deadlines and fair task allocation
+              can help create this structure. I recognise that teamwork
+              improves when everyone understands what is expected of them
+              and feels that their contribution is valued.
+            </p>
+
+            <div class="reflection-prompt">
+              <strong>My reflection:</strong> I should identify the actual
+              routines or agreements our group developed, such as meeting
+              arrangements, communication methods or task deadlines.
+            </div>
+          </article>
+
+          <article class="stage-card performing">
+            <span class="stage-number">Stage 04 · Working Effectively</span>
+            <h3>Performing</h3>
+
+            <p>
+              During performing, the group is able to focus more effectively
+              on completing its work. Members cooperate, solve problems and
+              take responsibility for their assigned tasks. Communication
+              and trust help the group work towards its goal.
+            </p>
+
+            <p>
+              This stage reminds me that completing my own task is only one
+              part of contributing to a team. I should also consider how my
+              work fits into the final outcome, support other members where
+              appropriate and communicate early if I experience difficulties.
+            </p>
+
+            <div class="reflection-prompt">
+              <strong>My reflection:</strong> I should explain what I
+              personally contributed, how the group combined its work and
+              what evidence shows that we made progress.
+            </div>
+          </article>
+
+          <article class="stage-card adjourning">
+            <span class="stage-number">Stage 05 · Looking Back</span>
+            <h3>Adjourning</h3>
+
+            <p>
+              Adjourning happens when the group's task comes to an end.
+              Members can reflect on what they achieved, recognise each
+              other's contributions and consider what they would do
+              differently next time.
+            </p>
+
+            <p>
+              I see this stage as an opportunity to evaluate both the final
+              outcome and the process we followed. Reflecting on our
+              strengths and difficulties can help me become a more
+              responsible and effective team member in future projects.
+            </p>
+
+            <div class="reflection-prompt">
+              <strong>My reflection:</strong> I should evaluate our actual
+              outcome, what I learned from the experience and what I would
+              improve in another group assignment.
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section learning-section">
+      <div class="section-inner">
+        <div class="section-heading">
+          <span class="mini-label">Lessons I Can Carry Forward</span>
+          <h2>What Makes a Team Work?</h2>
+          <p>
+            The group-development model highlights practical habits that
+            can make collaboration more productive and enjoyable.
+          </p>
+        </div>
+
+        <div class="learning-grid">
+          <article class="learning-card">
+            <div class="symbol">✦</div>
+            <h3>Communication</h3>
+            <p>
+              Share ideas clearly, listen actively and ask questions when
+              expectations or instructions are unclear.
+            </p>
+          </article>
+
+          <article class="learning-card">
+            <div class="symbol">◇</div>
+            <h3>Accountability</h3>
+            <p>
+              Complete assigned tasks on time, keep other members informed
+              and take responsibility for my contribution.
+            </p>
+          </article>
+
+          <article class="learning-card">
+            <div class="symbol">♡</div>
+            <h3>Respect</h3>
+            <p>
+              Recognise that people have different perspectives and working
+              styles, and treat those differences constructively.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section personal-growth">
+      <div class="growth-panel">
+        <span class="eyebrow">Personal Development</span>
+        <h2>How I Want to Grow as a Team Member</h2>
+
+        <p>
+          As a first-year student, I am still developing my approach to
+          collaborative learning. Group assignments give me opportunities
+          to practise skills that will be useful throughout my studies and
+          in my future career in data analytics.
+        </p>
+
+        <p>
+          Data analytics often involves interpreting information, explaining
+          findings and working with people who have different responsibilities
+          and perspectives. Being able to cooperate, communicate clearly and
+          meet deadlines will therefore be important to my professional growth.
+        </p>
+
+        <ul class="growth-list">
+          <li>Contribute ideas confidently while remaining open to feedback.</li>
+          <li>Agree on roles, responsibilities and deadlines early.</li>
+          <li>Address misunderstandings respectfully instead of ignoring them.</li>
+          <li>Check in with group members and communicate progress regularly.</li>
+          <li>Reflect on feedback after each project and apply it next time.</li>
+        </ul>
+
+        <div class="honesty-note">
+          <strong>Before submitting:</strong> Personalise this reflection with
+          real examples from your own group assignment. Explain how your group
+          was formed, whether you experienced disagreements, how you divided
+          the work, what you personally contributed and what happened during
+          the final presentation. Only include experiences that genuinely
+          happened.
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <span class="eyebrow">Final Thoughts</span>
+      <h2>Every Group Is a Learning Experience.</h2>
+
+      <p>
+        My main takeaway is that effective teamwork develops through
+        communication, trust, shared responsibility and reflection.
+        Understanding Tuckman's stages gives me a framework for recognising
+        group challenges and thinking about how I can contribute more
+        positively to future collaborations.
+      </p>
+
+      <a href="skills-projects.html" class="back-top">
+        Explore My Skills & Projects →
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      <span>Tinashe Motshubi</span> · Digital Learning Portfolio
+    </p>
+    <p>Learning with purpose. Growing through collaboration.</p>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
+
+    menuToggle.addEventListener("click", function () {
+      const isOpen = mainNav.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", isOpen);
+    });
+
+    mainNav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        mainNav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  </script>
+</body>
+</html>
