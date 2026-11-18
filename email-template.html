@@ -1,0 +1,946 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional email templates for Tinashe Motshubi's academic and internship communication.">
+  <title>Email Templates | Tinashe Motshubi</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #fffdf8;
+      --white: #ffffff;
+      --purple: #7852a9;
+      --purple-dark: #573a80;
+      --lilac: #eee5fa;
+      --blue: #e8f2fb;
+      --yellow: #fff4c9;
+      --silver: #e7e3ec;
+      --text: #393343;
+      --muted: #777181;
+      --shadow: 0 12px 35px rgba(84, 61, 112, 0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .top-strip {
+      height: 6px;
+      background: linear-gradient(
+        90deg,
+        #bca1e6,
+        #d9c8f0,
+        #c6dfef,
+        #f5e4a9,
+        #bca1e6
+      );
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 253, 248, 0.97);
+      border-bottom: 1px solid var(--silver);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .brand {
+      font-family: "Playfair Display", serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--purple-dark);
+      white-space: nowrap;
+    }
+
+    .brand span {
+      color: #ad8bd5;
+    }
+
+    .menu-toggle {
+      display: none;
+      padding: 8px 12px;
+      background: white;
+      border: 1px solid var(--silver);
+      border-radius: 10px;
+      font: inherit;
+      color: var(--purple-dark);
+      cursor: pointer;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 6px;
+    }
+
+    nav a {
+      padding: 8px 10px;
+      border-radius: 30px;
+      font-size: 0.77rem;
+      font-weight: 600;
+      transition: 0.25s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: var(--lilac);
+      color: var(--purple-dark);
+    }
+
+    .hero {
+      max-width: 1150px;
+      margin: auto;
+      padding: 80px 6% 60px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: center;
+      gap: 45px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: var(--yellow);
+      padding: 7px 15px;
+      border-radius: 30px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Playfair Display", serif;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 6vw, 4.7rem);
+      color: var(--purple-dark);
+      letter-spacing: -1.5px;
+      margin-bottom: 22px;
+    }
+
+    h1 em {
+      color: #a585ce;
+      font-weight: 500;
+    }
+
+    .hero p {
+      color: var(--muted);
+      max-width: 650px;
+    }
+
+    .hero-card {
+      padding: 32px;
+      border: 1px solid #e1d4f2;
+      border-radius: 26px;
+      background: linear-gradient(145deg, var(--lilac), #fffdf8);
+      box-shadow: var(--shadow);
+      transform: rotate(1deg);
+    }
+
+    .hero-card .symbol {
+      font-size: 3.2rem;
+      color: var(--purple);
+      margin-bottom: 14px;
+    }
+
+    .hero-card h2 {
+      font-size: 1.8rem;
+      color: var(--purple-dark);
+      margin-bottom: 12px;
+    }
+
+    .hero-card p {
+      font-size: 0.9rem;
+    }
+
+    .hero-card .mini-label {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 6px 12px;
+      border-radius: 20px;
+      background: white;
+      color: var(--purple-dark);
+      font-size: 0.76rem;
+      font-weight: 700;
+    }
+
+    .section {
+      padding: 70px 6%;
+    }
+
+    .section-inner {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 40px;
+    }
+
+    .section-heading span {
+      color: var(--purple);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    .section-heading h2 {
+      color: var(--purple-dark);
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin: 12px 0 15px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    .templates-section {
+      background: #f7f2fc;
+    }
+
+    .template-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .email-card {
+      background: white;
+      border: 1px solid var(--silver);
+      border-radius: 23px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .email-card.wide {
+      grid-column: 1 / -1;
+    }
+
+    .email-header {
+      padding: 25px 28px;
+      background: var(--lilac);
+      border-bottom: 1px solid var(--silver);
+    }
+
+    .email-card:nth-child(2) .email-header {
+      background: var(--blue);
+    }
+
+    .email-card:nth-child(3) .email-header {
+      background: var(--yellow);
+    }
+
+    .email-number {
+      color: var(--purple);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .email-header h3 {
+      font-size: 1.55rem;
+      color: var(--purple-dark);
+      margin: 8px 0;
+    }
+
+    .email-header p {
+      font-size: 0.87rem;
+      color: var(--muted);
+    }
+
+    .email-content {
+      padding: 28px;
+    }
+
+    .email-field {
+      padding: 11px 0;
+      border-bottom: 1px solid #f0edf4;
+      font-size: 0.89rem;
+      overflow-wrap: anywhere;
+    }
+
+    .email-field strong {
+      color: var(--purple-dark);
+      display: inline-block;
+      min-width: 85px;
+    }
+
+    .email-body {
+      padding-top: 20px;
+      color: #504a59;
+      font-size: 0.91rem;
+    }
+
+    .email-body p {
+      margin-bottom: 15px;
+    }
+
+    .email-body .signature {
+      font-family: "Playfair Display", serif;
+      font-size: 1.2rem;
+      color: var(--purple-dark);
+      margin-top: 18px;
+    }
+
+    .email-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 0 28px 28px;
+    }
+
+    .action-button {
+      display: inline-block;
+      border: none;
+      border-radius: 30px;
+      padding: 11px 17px;
+      background: var(--purple);
+      color: white;
+      font: inherit;
+      font-size: 0.83rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.25s;
+    }
+
+    .action-button:hover {
+      background: var(--purple-dark);
+      transform: translateY(-2px);
+    }
+
+    .action-button.secondary {
+      background: white;
+      color: var(--purple-dark);
+      border: 1px solid var(--silver);
+    }
+
+    .action-button.secondary:hover {
+      background: var(--lilac);
+    }
+
+    .etiquette-section {
+      background: var(--cream);
+    }
+
+    .etiquette-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .etiquette-card {
+      background: white;
+      border: 1px solid var(--silver);
+      border-radius: 20px;
+      padding: 27px;
+    }
+
+    .etiquette-card .icon {
+      display: grid;
+      place-items: center;
+      width: 45px;
+      height: 45px;
+      background: var(--blue);
+      border-radius: 14px;
+      color: var(--purple-dark);
+      font-size: 1.3rem;
+      margin-bottom: 18px;
+    }
+
+    .etiquette-card:nth-child(2) .icon {
+      background: var(--yellow);
+    }
+
+    .etiquette-card:nth-child(3) .icon {
+      background: var(--lilac);
+    }
+
+    .etiquette-card h3 {
+      color: var(--purple-dark);
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    .etiquette-card p {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .quick-guide {
+      background: var(--blue);
+    }
+
+    .guide-panel {
+      max-width: 850px;
+      margin: auto;
+      padding: 35px;
+      background: white;
+      border: 1px solid #d8e6f3;
+      border-radius: 25px;
+      box-shadow: var(--shadow);
+    }
+
+    .guide-panel h2 {
+      color: var(--purple-dark);
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .guide-panel ol {
+      padding-left: 24px;
+    }
+
+    .guide-panel li {
+      padding: 8px 0;
+      color: var(--muted);
+    }
+
+    .closing {
+      text-align: center;
+      padding: 75px 6%;
+    }
+
+    .closing h2 {
+      color: var(--purple-dark);
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 15px;
+    }
+
+    .closing p {
+      max-width: 670px;
+      margin: auto;
+      color: var(--muted);
+    }
+
+    .next-link {
+      display: inline-block;
+      margin-top: 25px;
+      background: var(--purple);
+      color: white;
+      padding: 13px 24px;
+      border-radius: 30px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      transition: 0.25s;
+    }
+
+    .next-link:hover {
+      background: var(--purple-dark);
+      transform: translateY(-2px);
+    }
+
+    footer {
+      border-top: 1px solid var(--silver);
+      padding: 28px 6%;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    footer strong {
+      color: var(--purple);
+    }
+
+    @media (max-width: 900px) {
+      .nav-container {
+        flex-wrap: wrap;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      nav.open {
+        display: flex;
+      }
+
+      nav a {
+        padding: 10px 13px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        max-width: 600px;
+      }
+
+      .etiquette-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .section {
+        padding: 55px 5%;
+      }
+
+      .template-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .email-card.wide {
+        grid-column: auto;
+      }
+
+      .email-header,
+      .email-content {
+        padding: 23px;
+      }
+
+      .email-actions {
+        padding: 0 23px 23px;
+      }
+
+      .guide-panel {
+        padding: 25px 22px;
+      }
+    }
+
+    @media print {
+      header,
+      .top-strip,
+      .hero,
+      .email-actions,
+      .etiquette-section,
+      .quick-guide,
+      .closing,
+      footer {
+        display: none !important;
+      }
+
+      body {
+        background: white;
+      }
+
+      .templates-section,
+      .section {
+        padding: 0;
+        background: white;
+      }
+
+      .section-heading {
+        margin-bottom: 20px;
+      }
+
+      .template-grid {
+        display: block;
+      }
+
+      .email-card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+        margin-bottom: 25px;
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top-strip"></div>
+
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="brand">Tinashe<span>.</span></a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        ☰ Menu
+      </button>
+
+      <nav id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="cv.html">CV</a>
+        <a href="individual-reflection.html">Individual Reflection</a>
+        <a href="group-reflection.html">Group Reflection</a>
+        <a href="skills-projects.html">Skills & Projects</a>
+        <a href="application-letter.html">Application Letter</a>
+        <a href="email-template.html" class="active">Email Template</a>
+        <a href="study-resources.html">Study Resources</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <span class="eyebrow">Digital Communication</span>
+        <h1>Say It with <em>Purpose.</em></h1>
+
+        <p>
+          Professional emails are an important part of academic and working
+          life. They help me ask questions, introduce myself, follow up on
+          opportunities and express appreciation clearly and respectfully.
+          This page contains three reusable email examples.
+        </p>
+      </div>
+
+      <aside class="hero-card">
+        <div class="symbol">✉</div>
+        <h2>Clear. Courteous. Professional.</h2>
+        <p>
+          Every effective email should have a useful subject line, an
+          appropriate greeting, a clear message and a respectful closing.
+        </p>
+        <span class="mini-label">My Communication Toolkit</span>
+      </aside>
+    </section>
+
+    <section class="section templates-section">
+      <div class="section-inner">
+        <div class="section-heading">
+          <span>01 · Ready-to-Adapt Examples</span>
+          <h2>My Email Templates</h2>
+          <p>
+            Choose the example that matches your purpose. Update the
+            placeholders and details before sending.
+          </p>
+        </div>
+
+        <div class="template-grid">
+
+          <article class="email-card">
+            <div class="email-header">
+              <span class="email-number">EMAIL 01</span>
+              <h3>Internship Enquiry</h3>
+              <p>Introducing yourself and asking about opportunities.</p>
+            </div>
+
+            <div class="email-content" id="emailOne">
+              <div class="email-field">
+                <strong>To:</strong> [Recruitment Email]
+              </div>
+              <div class="email-field">
+                <strong>Subject:</strong> Enquiry About Technology Internship Opportunities
+              </div>
+
+              <div class="email-body">
+                <p>Dear Hiring Manager,</p>
+
+                <p>
+                  My name is Tinashe Motshubi, and I am a first-year student
+                  pursuing a bachelor's degree in the BIDA programme. I am
+                  writing to enquire whether your organisation offers
+                  internship opportunities for students interested in the
+                  technology sector.
+                </p>
+
+                <p>
+                  I am particularly interested in developing my knowledge
+                  of data analytics and gaining practical exposure to a
+                  professional working environment. I am eager to learn,
+                  improve my skills and gain insight into how technology
+                  can be used to solve real-world problems.
+                </p>
+
+                <p>
+                  I would appreciate any information you could share about
+                  available opportunities, eligibility requirements and
+                  application procedures.
+                </p>
+
+                <p>Thank you for your time and consideration.</p>
+
+                <p>Kind regards,</p>
+                <p class="signature">Tinashe Motshubi</p>
+                <p>tinashepm2007@icloud.com</p>
+              </div>
+            </div>
+
+            <div class="email-actions">
+              <button class="action-button copy-button" data-target="emailOne">
+                Copy Email
+              </button>
+            </div>
+          </article>
+
+          <article class="email-card">
+            <div class="email-header">
+              <span class="email-number">EMAIL 02</span>
+              <h3>Application Follow-Up</h3>
+              <p>Politely checking on a submitted application.</p>
+            </div>
+
+            <div class="email-content" id="emailTwo">
+              <div class="email-field">
+                <strong>To:</strong> [Recruitment Contact]
+              </div>
+              <div class="email-field">
+                <strong>Subject:</strong> Follow-Up on Internship Application
+              </div>
+
+              <div class="email-body">
+                <p>Dear [Recipient's Name],</p>
+
+                <p>
+                  I hope you are well. I am writing to follow up on my
+                  application for the [Internship Title] opportunity,
+                  which I submitted on [Date].
+                </p>
+
+                <p>
+                  I remain interested in the opportunity to gain practical
+                  experience and develop my skills within your organisation.
+                  I would be grateful for any updates you may be able to
+                  provide regarding the application process.
+                </p>
+
+                <p>
+                  Thank you for your time and consideration. I understand
+                  that recruitment takes time and appreciate your attention
+                  to my enquiry.
+                </p>
+
+                <p>Kind regards,</p>
+                <p class="signature">Tinashe Motshubi</p>
+                <p>tinashepm2007@icloud.com</p>
+              </div>
+            </div>
+
+            <div class="email-actions">
+              <button class="action-button copy-button" data-target="emailTwo">
+                Copy Email
+              </button>
+            </div>
+          </article>
+
+          <article class="email-card wide">
+            <div class="email-header">
+              <span class="email-number">EMAIL 03</span>
+              <h3>Thank-You Email</h3>
+              <p>Showing appreciation after an interview or professional meeting.</p>
+            </div>
+
+            <div class="email-content" id="emailThree">
+              <div class="email-field">
+                <strong>To:</strong> [Interviewer's Email]
+              </div>
+              <div class="email-field">
+                <strong>Subject:</strong> Thank You for the Opportunity
+              </div>
+
+              <div class="email-body">
+                <p>Dear [Recipient's Name],</p>
+
+                <p>
+                  Thank you for taking the time to meet with me and discuss
+                  the [Internship Title] opportunity. I appreciate the chance
+                  to learn more about your organisation and the work carried
+                  out by your team.
+                </p>
+
+                <p>
+                  Our discussion strengthened my interest in gaining
+                  practical experience in the technology sector and
+                  developing my understanding of data analytics. I value
+                  the information and guidance you shared.
+                </p>
+
+                <p>
+                  Thank you again for your time and consideration. I look
+                  forward to hearing from you regarding the next steps,
+                  if applicable.
+                </p>
+
+                <p>Kind regards,</p>
+                <p class="signature">Tinashe Motshubi</p>
+                <p>tinashepm2007@icloud.com</p>
+              </div>
+            </div>
+
+            <div class="email-actions">
+              <button class="action-button copy-button" data-target="emailThree">
+                Copy Email
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section etiquette-section">
+      <div class="section-inner">
+        <div class="section-heading">
+          <span>02 · Professional Etiquette</span>
+          <h2>Small Details Matter</h2>
+          <p>
+            Good email habits make communication easier for both the sender
+            and the recipient.
+          </p>
+        </div>
+
+        <div class="etiquette-grid">
+          <article class="etiquette-card">
+            <div class="icon">✦</div>
+            <h3>Use a Clear Subject</h3>
+            <p>
+              Tell the recipient what the email concerns. Avoid vague
+              subjects such as "Hello" or "Important".
+            </p>
+          </article>
+
+          <article class="etiquette-card">
+            <div class="icon">✉</div>
+            <h3>Keep It Focused</h3>
+            <p>
+              State your purpose early, use short paragraphs and include
+              the details needed for the recipient to respond.
+            </p>
+          </article>
+
+          <article class="etiquette-card">
+            <div class="icon">✓</div>
+            <h3>Proofread Before Sending</h3>
+            <p>
+              Check spelling, names, attachments, recipient addresses and
+              the tone of your message before pressing send.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section quick-guide">
+      <div class="guide-panel">
+        <span class="eyebrow">03 · A Simple Formula</span>
+        <h2>How to Structure a Professional Email</h2>
+
+        <ol>
+          <li><strong>Subject line:</strong> Make the purpose easy to recognise.</li>
+          <li><strong>Greeting:</strong> Use the recipient's name when known.</li>
+          <li><strong>Introduction:</strong> Explain who you are when necessary.</li>
+          <li><strong>Main message:</strong> State your request or information clearly.</li>
+          <li><strong>Closing:</strong> Thank the recipient or explain the next step.</li>
+          <li><strong>Signature:</strong> Include your full name and appropriate contact details.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="closing">
+      <h2>Communication Is a Professional Skill.</h2>
+      <p>
+        By practising clear and respectful written communication, I can
+        become more confident when contacting lecturers, applying for
+        opportunities and engaging with professionals.
+      </p>
+
+      <a href="study-resources.html" class="next-link">
+        Continue to Study Resources →
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Tinashe Motshubi</strong> · Digital Learning Portfolio</p>
+    <p>Communicate clearly. Connect professionally.</p>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
+
+    menuToggle.addEventListener("click", function () {
+      const isOpen = mainNav.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", isOpen);
+    });
+
+    mainNav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        mainNav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    document.querySelectorAll(".copy-button").forEach(function (button) {
+      button.addEventListener("click", async function () {
+        const target = document.getElementById(this.dataset.target);
+        const originalText = this.textContent;
+
+        const emailText = Array.from(
+          target.querySelectorAll(".email-field, .email-body p")
+        ).map(function (element) {
+          return element.innerText.trim();
+        }).filter(Boolean).join("\n\n");
+
+        try {
+          await navigator.clipboard.writeText(emailText);
+          this.textContent = "Copied Successfully!";
+        } catch (error) {
+          const textArea = document.createElement("textarea");
+          textArea.value = emailText;
+          textArea.style.position = "fixed";
+          textArea.style.opacity = "0";
+          document.body.appendChild(textArea);
+          textArea.select();
+
+          const copied = document.execCommand("copy");
+          textArea.remove();
+
+          this.textContent = copied ? "Copied Successfully!" : "Copy Failed";
+        }
+
+        setTimeout(() => {
+          this.textContent = originalText;
+        }, 2200);
+      });
+    });
+  </script>
+</body>
+</html>
