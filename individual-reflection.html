@@ -1,0 +1,965 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#faf7f0">
+  <meta name="description" content="Tinashe Motshubi's individual reflection on learning, personal growth, teamwork and future ambitions.">
+  <title>Individual Reflection | Tinashe Motshubi</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #faf7f0;
+      --white: #ffffff;
+      --lilac: #dfd0fa;
+      --purple: #8c6bc4;
+      --purple-dark: #554078;
+      --blue: #c8e5f5;
+      --yellow: #f6df91;
+      --silver: #d5d8df;
+      --ink: #30283b;
+      --muted: #746b7d;
+      --line: #e8e1eb;
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "DM Sans", Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.8;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .announcement {
+      padding: 9px 15px;
+      background: var(--purple-dark);
+      color: white;
+      text-align: center;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(250,247,240,.96);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      max-width: 1150px;
+      margin: auto;
+      padding: 16px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-family: var(--serif);
+      font-size: 23px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .brand span {
+      color: var(--purple);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 600;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--purple);
+    }
+
+    .nav-links .nav-cta {
+      padding: 10px 16px;
+      border-radius: 30px;
+      background: var(--ink);
+      color: white;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      background: white;
+      color: var(--ink);
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .hero {
+      padding: 75px 5% 80px;
+      background: var(--lilac);
+    }
+
+    .hero-inner {
+      max-width: 1050px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 270px;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--purple-dark);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 24px;
+      height: 2px;
+      background: var(--purple);
+    }
+
+    .hero h1 {
+      margin: 20px 0;
+      font-family: var(--serif);
+      font-size: clamp(46px, 7vw, 77px);
+      font-weight: 500;
+      letter-spacing: -2px;
+      line-height: 1.1;
+    }
+
+    .hero h1 em {
+      color: var(--purple-dark);
+    }
+
+    .hero p {
+      max-width: 610px;
+      color: #5b5269;
+      font-size: 14px;
+      line-height: 2;
+    }
+
+    .journal-stamp {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 230px;
+      height: 230px;
+      margin: auto;
+      border: 1px solid rgba(85,64,120,.4);
+      border-radius: 50%;
+      outline: 1px solid rgba(85,64,120,.25);
+      outline-offset: 9px;
+      background: rgba(255,255,255,.35);
+      text-align: center;
+    }
+
+    .journal-stamp span {
+      display: block;
+      font-family: var(--serif);
+      font-size: 65px;
+      line-height: 1.1;
+      color: var(--purple-dark);
+    }
+
+    .journal-stamp small {
+      display: block;
+      margin-top: 8px;
+      color: var(--purple-dark);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 75px 5% 90px;
+    }
+
+    .opening-note {
+      padding: 35px;
+      border-left: 4px solid var(--purple);
+      border-radius: 0 20px 20px 0;
+      background: white;
+    }
+
+    .opening-note .eyebrow {
+      margin-bottom: 14px;
+    }
+
+    .opening-note p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 2;
+    }
+
+    .opening-note p + p {
+      margin-top: 13px;
+    }
+
+    .opening-note strong {
+      color: var(--ink);
+    }
+
+    .section-heading {
+      margin: 65px 0 25px;
+    }
+
+    .section-heading h2 {
+      margin: 12px 0;
+      font-family: var(--serif);
+      font-size: clamp(33px, 5vw, 48px);
+      font-weight: 500;
+      letter-spacing: -1px;
+      line-height: 1.2;
+    }
+
+    .section-heading h2 em {
+      color: var(--purple);
+    }
+
+    .section-heading p {
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .reflection-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .reflection-card {
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: white;
+    }
+
+    .reflection-card:nth-child(2) {
+      background: var(--blue);
+      border-color: transparent;
+    }
+
+    .reflection-card:nth-child(3) {
+      background: var(--yellow);
+      border-color: transparent;
+    }
+
+    .reflection-card:nth-child(4) {
+      background: var(--lilac);
+      border-color: transparent;
+    }
+
+    .card-number {
+      margin-bottom: 14px;
+      color: var(--purple-dark);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .reflection-card h3 {
+      margin-bottom: 12px;
+      font-family: var(--serif);
+      font-size: 25px;
+      font-weight: 500;
+      line-height: 1.3;
+    }
+
+    .reflection-card p {
+      color: #62596d;
+      font-size: 13px;
+      line-height: 2;
+    }
+
+    .reflection-card p + p {
+      margin-top: 12px;
+    }
+
+    .pull-quote {
+      margin: 65px 0;
+      padding: 45px 35px;
+      border-radius: 25px;
+      background: var(--ink);
+      color: white;
+      text-align: center;
+    }
+
+    .pull-quote .quote-mark {
+      color: var(--yellow);
+      font-family: var(--serif);
+      font-size: 65px;
+      line-height: 1;
+    }
+
+    .pull-quote blockquote {
+      max-width: 700px;
+      margin: 10px auto 18px;
+      font-family: var(--serif);
+      font-size: clamp(27px, 4vw, 43px);
+      font-style: italic;
+      line-height: 1.4;
+    }
+
+    .pull-quote p {
+      color: #d4cedc;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .growth-list {
+      display: grid;
+      gap: 13px;
+    }
+
+    .growth-item {
+      display: grid;
+      grid-template-columns: 55px 1fr;
+      gap: 17px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: white;
+    }
+
+    .growth-number {
+      display: grid;
+      place-items: center;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: var(--lilac);
+      color: var(--purple-dark);
+      font-family: var(--serif);
+      font-size: 20px;
+    }
+
+    .growth-item:nth-child(2) .growth-number {
+      background: var(--blue);
+    }
+
+    .growth-item:nth-child(3) .growth-number {
+      background: var(--yellow);
+    }
+
+    .growth-item h3 {
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+
+    .growth-item p {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.9;
+    }
+
+    .future-card {
+      margin-top: 65px;
+      padding: 40px;
+      border-radius: 25px;
+      background: var(--blue);
+    }
+
+    .future-card h2 {
+      margin: 13px 0;
+      font-family: var(--serif);
+      font-size: clamp(32px, 5vw, 47px);
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .future-card h2 em {
+      color: var(--purple-dark);
+    }
+
+    .future-card p {
+      max-width: 750px;
+      color: #53616c;
+      font-size: 13px;
+      line-height: 2;
+    }
+
+    .reflection-prompt {
+      margin-top: 20px;
+      padding: 18px 20px;
+      border: 1px dashed rgba(85,64,120,.4);
+      border-radius: 15px;
+      background: rgba(255,255,255,.45);
+      color: #514760;
+      font-size: 12px;
+    }
+
+    .reflection-prompt strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--purple-dark);
+    }
+
+    .page-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 35px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 20px;
+      border: 1px solid var(--ink);
+      border-radius: 30px;
+      background: var(--ink);
+      color: white;
+      font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: .2s;
+    }
+
+    .button:hover {
+      background: var(--purple-dark);
+      border-color: var(--purple-dark);
+      transform: translateY(-2px);
+    }
+
+    .button-outline {
+      background: transparent;
+      color: var(--ink);
+      border-color: var(--silver);
+    }
+
+    .button-outline:hover {
+      background: white;
+      color: var(--ink);
+      border-color: var(--silver);
+    }
+
+    footer {
+      padding: 28px 5%;
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-inner {
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-brand {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .footer-brand span {
+      color: var(--purple);
+    }
+
+    .footer-inner p {
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 15px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .footer-links a:hover {
+      color: var(--purple);
+    }
+
+    @media (max-width: 800px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .journal-stamp {
+        width: 170px;
+        height: 170px;
+      }
+
+      .journal-stamp span {
+        font-size: 50px;
+      }
+
+      .nav-links {
+        gap: 12px;
+      }
+
+      .nav-links a {
+        font-size: 11px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .nav-inner {
+        padding: 13px 5%;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 15px 5% 22px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: var(--cream);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 12px 0;
+        font-size: 13px;
+      }
+
+      .nav-links .nav-cta {
+        margin-top: 8px;
+        padding: 12px;
+        text-align: center;
+      }
+
+      .hero {
+        padding: 55px 5%;
+      }
+
+      .container {
+        padding-top: 45px;
+        padding-bottom: 60px;
+      }
+
+      .reflection-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .opening-note,
+      .reflection-card {
+        padding: 25px;
+      }
+
+      .pull-quote {
+        padding: 35px 23px;
+      }
+
+      .future-card {
+        padding: 27px;
+      }
+
+      .growth-item {
+        grid-template-columns: 42px 1fr;
+        gap: 12px;
+        padding: 18px;
+      }
+
+      .growth-number {
+        width: 38px;
+        height: 38px;
+      }
+    }
+
+    @media print {
+      .announcement,
+      .navbar,
+      .page-actions,
+      footer {
+        display: none !important;
+      }
+
+      body {
+        background: white;
+      }
+
+      .hero,
+      .future-card,
+      .pull-quote {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+
+      .container {
+        padding: 25px 0;
+      }
+
+      .reflection-card,
+      .growth-item,
+      .opening-note {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="announcement">
+    Growth is a journey, not a destination ✦
+  </div>
+
+  <header class="navbar">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a href="index.html" class="brand">Tinashe<span>.</span></a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="navLinks"
+      >☰</button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home & About</a>
+        <a href="cv.html">CV</a>
+        <a href="individual-reflection.html" class="active">My reflection</a>
+        <a href="group-reflection.html">Group reflection</a>
+        <a href="skills-projects.html">Skills & Projects</a>
+        <a href="study-resources.html" class="nav-cta">Study resources ↗</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- REFLECTION HERO -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <span class="eyebrow">Personal journal · 02</span>
+          <h1>A work in progress.<br><em>And proud of it.</em></h1>
+          <p>
+            This reflection is an opportunity to look beyond grades and
+            assignments, consider what I am learning about myself, recognise
+            areas where I can improve and think about the person I want to become.
+          </p>
+        </div>
+
+        <div class="journal-stamp" aria-label="Personal growth journal">
+          <div>
+            <span>TM</span>
+            <small>Reflect · Learn · Grow</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+
+      <!-- INTRODUCTION -->
+      <section class="opening-note">
+        <span class="eyebrow">A note to myself</span>
+        <p>
+          <strong>Personal growth begins with honest reflection.</strong>
+          As a first-year BIDA student, I am still adjusting to the expectations
+          of university life, discovering my strengths and developing habits
+          that will support my future.
+        </p>
+        <p>
+          I see myself as quirky, easygoing and empathetic. These qualities
+          influence how I interact with people and approach new experiences.
+          At the same time, I understand that having potential is only the
+          beginning. I must put that potential into practice through effort,
+          consistency and a willingness to learn.
+        </p>
+      </section>
+
+      <!-- LEARNING EXPERIENCE -->
+      <section>
+        <div class="section-heading">
+          <span class="eyebrow">Looking inward</span>
+          <h2>Lessons beyond <em>the classroom.</em></h2>
+          <p>
+            Reflection helps me connect my everyday experiences with the
+            skills, attitudes and habits I want to develop.
+          </p>
+        </div>
+
+        <div class="reflection-grid">
+
+          <article class="reflection-card">
+            <div class="card-number">01 / SELF-AWARENESS</div>
+            <h3>Understanding who I am.</h3>
+            <p>
+              I recognise that being easygoing and empathetic can help me build
+              positive relationships. I enjoy understanding other people and
+              appreciate the different perspectives they bring to a situation.
+            </p>
+            <p>
+              I also want to become more intentional about how I use my time,
+              respond to challenges and maintain focus on my academic priorities.
+            </p>
+          </article>
+
+          <article class="reflection-card">
+            <div class="card-number">02 / LEARNING</div>
+            <h3>Becoming a better student.</h3>
+            <p>
+              Studying at university requires responsibility, independent
+              learning and consistent effort. I want to make the most of
+              my degree by engaging with course material, asking questions
+              and seeking help when I need clarification.
+            </p>
+            <p>
+              My interest in biology, chemistry and data analytics reminds
+              me to remain curious and approach unfamiliar concepts with
+              an open mind.
+            </p>
+          </article>
+
+          <article class="reflection-card">
+            <div class="card-number">03 / CHALLENGES</div>
+            <h3>Learning to work through difficulty.</h3>
+            <p>
+              Challenges are an opportunity to identify what I do not yet
+              understand and decide how to improve. Rather than expecting
+              everything to be easy, I want to develop patience and persistence.
+            </p>
+            <p>
+              When a task feels difficult, I can break it into smaller steps,
+              review my approach and seek constructive feedback.
+            </p>
+          </article>
+
+          <article class="reflection-card">
+            <div class="card-number">04 / RESPONSIBILITY</div>
+            <h3>Showing up with intention.</h3>
+            <p>
+              I value punctuality, meeting deadlines and prioritising important
+              tasks. These habits can help me become a dependable student and
+              a reliable future colleague.
+            </p>
+            <p>
+              My goal is to turn these values into consistent actions through
+              planning, preparation and regular review of my responsibilities.
+            </p>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- PULL QUOTE -->
+      <aside class="pull-quote">
+        <div class="quote-mark">“</div>
+        <blockquote>
+          I don't have to know everything today. I just have to keep learning
+          and become better than I was yesterday.
+        </blockquote>
+        <p>A reminder to keep growing</p>
+      </aside>
+
+      <!-- SKILLS DEVELOPMENT -->
+      <section>
+        <div class="section-heading">
+          <span class="eyebrow">The growth plan</span>
+          <h2>Turning reflection into <em>action.</em></h2>
+          <p>
+            Reflection is most useful when it leads to practical changes.
+            These are areas I want to keep developing throughout my studies.
+          </p>
+        </div>
+
+        <div class="growth-list">
+
+          <article class="growth-item">
+            <div class="growth-number">01</div>
+            <div>
+              <h3>Strengthen my study routine</h3>
+              <p>
+                I want to organise my study time, revise consistently,
+                keep track of deadlines and avoid leaving important tasks
+                until the last minute.
+              </p>
+            </div>
+          </article>
+
+          <article class="growth-item">
+            <div class="growth-number">02</div>
+            <div>
+              <h3>Build confidence through practice</h3>
+              <p>
+                I can improve by participating in class, practising new
+                concepts, working through examples and asking questions
+                when something is unclear.
+              </p>
+            </div>
+          </article>
+
+          <article class="growth-item">
+            <div class="growth-number">03</div>
+            <div>
+              <h3>Develop professional and analytical skills</h3>
+              <p>
+                I intend to strengthen my communication, teamwork,
+                problem-solving and technology skills as preparation
+                for a future career in data analytics.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- FUTURE REFLECTION -->
+      <section class="future-card">
+        <span class="eyebrow">Looking ahead</span>
+        <h2>My future deserves<br><em>my effort today.</em></h2>
+        <p>
+          My long-term ambition is to become a data analyst and establish
+          my own data analytics firm. Reaching that goal will require more
+          than ambition. I will need relevant knowledge, practical experience,
+          integrity, discipline and the ability to work with people.
+        </p>
+        <p style="margin-top: 13px;">
+          As I continue my studies, I want to remain open to feedback,
+          acknowledge my mistakes and celebrate genuine progress. I may
+          still be discovering the professional I want to become, but I
+          can take meaningful steps towards that future now.
+        </p>
+
+        <div class="reflection-prompt">
+          <strong>A reminder for my next reflection</strong>
+          What specific experience challenged me this term? What did I
+          personally do, what did I learn, and what evidence shows that I improved?
+        </div>
+      </section>
+
+      <!-- PERSONAL CONCLUSION -->
+      <section>
+        <div class="section-heading">
+          <span class="eyebrow">Final thoughts</span>
+          <h2>Still becoming. <em>Still believing.</em></h2>
+        </div>
+
+        <div class="opening-note">
+          <p>
+            This reflection reminds me that growth is a continuing process.
+            I have qualities I can build on, skills I still need to strengthen
+            and ambitions that motivate me to keep moving forward.
+          </p>
+          <p>
+            I want to approach my education with curiosity, treat people with
+            empathy and take responsibility for my development. I do not need
+            to have every answer immediately. What matters is that I remain
+            willing to learn, apply what I learn and keep working towards
+            the future I envision.
+          </p>
+        </div>
+      </section>
+
+      <!-- ACTIONS -->
+      <div class="page-actions">
+        <button class="button" onclick="window.print()">Print / Save as PDF ↗</button>
+        <a href="group-reflection.html" class="button button-outline">Next: Group reflection →</a>
+        <a href="index.html" class="button button-outline">← Home</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <a href="index.html" class="footer-brand">Tinashe<span>.</span></a>
+      <p>Personal portfolio · Reflect. Learn. Grow. · <span id="year"></span></p>
+      <div class="footer-links">
+        <a href="cv.html">CV</a>
+        <a href="skills-projects.html">Skills & Projects</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", function () {
+      const isOpen = navLinks.classList.toggle("open");
+
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+      );
+      menuToggle.textContent = isOpen ? "×" : "☰";
+    });
+
+    navLinks.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
