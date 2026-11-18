@@ -1,0 +1,846 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tinashe Motshubi's internship application letter for opportunities in the technology sector.">
+  <title>Application Letter | Tinashe Motshubi</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #fffdf8;
+      --white: #ffffff;
+      --purple: #7852a9;
+      --purple-dark: #573a80;
+      --lilac: #eee5fa;
+      --blue: #e8f2fb;
+      --yellow: #fff4c9;
+      --silver: #e7e3ec;
+      --text: #393343;
+      --muted: #777181;
+      --shadow: 0 12px 35px rgba(84, 61, 112, 0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .top-strip {
+      height: 6px;
+      background: linear-gradient(
+        90deg,
+        #bca1e6,
+        #d9c8f0,
+        #c6dfef,
+        #f5e4a9,
+        #bca1e6
+      );
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 253, 248, 0.97);
+      border-bottom: 1px solid var(--silver);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .brand {
+      font-family: "Playfair Display", serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--purple-dark);
+      white-space: nowrap;
+    }
+
+    .brand span {
+      color: #ad8bd5;
+    }
+
+    .menu-toggle {
+      display: none;
+      padding: 8px 12px;
+      background: white;
+      border: 1px solid var(--silver);
+      border-radius: 10px;
+      font: inherit;
+      color: var(--purple-dark);
+      cursor: pointer;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 6px;
+    }
+
+    nav a {
+      padding: 8px 10px;
+      border-radius: 30px;
+      font-size: 0.77rem;
+      font-weight: 600;
+      transition: 0.25s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: var(--lilac);
+      color: var(--purple-dark);
+    }
+
+    .hero {
+      max-width: 1100px;
+      margin: auto;
+      padding: 75px 6% 45px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: var(--yellow);
+      padding: 7px 15px;
+      border-radius: 30px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Playfair Display", serif;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: clamp(2.6rem, 6vw, 4.5rem);
+      color: var(--purple-dark);
+      letter-spacing: -1.5px;
+      margin-bottom: 18px;
+    }
+
+    h1 em {
+      color: #a585ce;
+      font-weight: 500;
+    }
+
+    .hero p {
+      max-width: 660px;
+      margin: auto;
+      color: var(--muted);
+    }
+
+    .letter-section {
+      padding: 25px 6% 80px;
+    }
+
+    .letter-layout {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 0.7fr 1.3fr;
+      align-items: start;
+      gap: 30px;
+    }
+
+    .side-panel {
+      position: sticky;
+      top: 110px;
+    }
+
+    .side-card {
+      background: var(--lilac);
+      border: 1px solid #e1d4f2;
+      border-radius: 24px;
+      padding: 30px;
+      margin-bottom: 20px;
+    }
+
+    .side-card h2 {
+      font-size: 1.65rem;
+      color: var(--purple-dark);
+      margin-bottom: 15px;
+    }
+
+    .side-card p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 14px;
+    }
+
+    .side-card ul {
+      list-style: none;
+    }
+
+    .side-card li {
+      position: relative;
+      padding: 9px 0 9px 24px;
+      border-bottom: 1px solid rgba(120, 82, 169, 0.13);
+      color: var(--text);
+      font-size: 0.88rem;
+    }
+
+    .side-card li:last-child {
+      border-bottom: none;
+    }
+
+    .side-card li::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      color: var(--purple);
+    }
+
+    .tip-card {
+      background: var(--yellow);
+      border: 1px solid #f1e5b6;
+      border-radius: 20px;
+      padding: 24px;
+    }
+
+    .tip-card h3 {
+      color: #6c592b;
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+    }
+
+    .tip-card p {
+      color: #75643b;
+      font-size: 0.87rem;
+    }
+
+    .letter-paper {
+      background: white;
+      border: 1px solid var(--silver);
+      border-radius: 8px;
+      padding: clamp(25px, 5vw, 58px);
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .paper-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 15px;
+      padding-bottom: 24px;
+      border-bottom: 2px solid var(--lilac);
+      margin-bottom: 28px;
+    }
+
+    .sender-name {
+      font-family: "Playfair Display", serif;
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: var(--purple-dark);
+      line-height: 1.3;
+    }
+
+    .sender-details {
+      color: var(--muted);
+      font-size: 0.82rem;
+      margin-top: 8px;
+      overflow-wrap: anywhere;
+    }
+
+    .document-label {
+      background: var(--blue);
+      color: var(--purple-dark);
+      border-radius: 20px;
+      padding: 7px 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.64rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .letter-date {
+      margin-bottom: 22px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .recipient {
+      margin-bottom: 24px;
+      font-size: 0.92rem;
+    }
+
+    .recipient strong {
+      color: var(--purple-dark);
+    }
+
+    .subject {
+      font-weight: 700;
+      color: var(--purple-dark);
+      margin: 24px 0 18px;
+      padding: 13px 15px;
+      background: #f8f4fd;
+      border-left: 3px solid #bca1e6;
+      font-size: 0.9rem;
+    }
+
+    .letter-body p {
+      font-size: 0.94rem;
+      margin-bottom: 18px;
+      color: #504a59;
+    }
+
+    .letter-body strong {
+      color: var(--purple-dark);
+    }
+
+    .sign-off {
+      margin-top: 30px;
+      font-size: 0.94rem;
+    }
+
+    .signature {
+      font-family: "Playfair Display", serif;
+      color: var(--purple);
+      font-size: 1.55rem;
+      font-style: italic;
+      margin: 12px 0 3px;
+    }
+
+    .letter-name {
+      font-weight: 700;
+      color: var(--purple-dark);
+    }
+
+    .action-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .action-button {
+      display: inline-block;
+      border: none;
+      border-radius: 30px;
+      padding: 12px 19px;
+      background: var(--purple);
+      color: white;
+      font: inherit;
+      font-size: 0.86rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.25s;
+    }
+
+    .action-button:hover {
+      background: var(--purple-dark);
+      transform: translateY(-2px);
+    }
+
+    .action-button.secondary {
+      background: white;
+      color: var(--purple-dark);
+      border: 1px solid var(--silver);
+    }
+
+    .action-button.secondary:hover {
+      background: var(--lilac);
+    }
+
+    .checklist-section {
+      background: #f7f2fc;
+      padding: 70px 6%;
+    }
+
+    .checklist-inner {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .section-heading h2 {
+      color: var(--purple-dark);
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      margin: 12px 0;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    .checklist {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 15px;
+    }
+
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 20px;
+      border: 1px solid var(--silver);
+      border-radius: 17px;
+      background: white;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .check-item span {
+      color: var(--purple);
+      font-weight: 700;
+    }
+
+    .closing {
+      text-align: center;
+      padding: 75px 6%;
+    }
+
+    .closing h2 {
+      color: var(--purple-dark);
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 15px;
+    }
+
+    .closing p {
+      max-width: 650px;
+      margin: auto;
+      color: var(--muted);
+    }
+
+    .next-link {
+      display: inline-block;
+      margin-top: 25px;
+      background: var(--purple);
+      color: white;
+      padding: 13px 24px;
+      border-radius: 30px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      transition: 0.25s;
+    }
+
+    .next-link:hover {
+      background: var(--purple-dark);
+      transform: translateY(-2px);
+    }
+
+    footer {
+      border-top: 1px solid var(--silver);
+      padding: 28px 6%;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    footer strong {
+      color: var(--purple);
+    }
+
+    @media (max-width: 900px) {
+      .nav-container {
+        flex-wrap: wrap;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      nav.open {
+        display: flex;
+      }
+
+      nav a {
+        padding: 10px 13px;
+      }
+
+      .letter-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .side-panel {
+        position: static;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .letter-section {
+        padding-left: 4%;
+        padding-right: 4%;
+      }
+
+      .letter-paper {
+        padding: 25px 20px;
+      }
+
+      .paper-top {
+        flex-direction: column;
+      }
+
+      .checklist {
+        grid-template-columns: 1fr;
+      }
+
+      .section-heading {
+        padding: 0 8px;
+      }
+    }
+
+    @media print {
+      @page {
+        size: A4;
+        margin: 18mm;
+      }
+
+      body {
+        background: white;
+        font-size: 11pt;
+      }
+
+      header,
+      .top-strip,
+      .hero,
+      .side-panel,
+      .action-row,
+      .checklist-section,
+      .closing,
+      footer {
+        display: none !important;
+      }
+
+      .letter-section {
+        padding: 0;
+      }
+
+      .letter-layout {
+        display: block;
+        max-width: none;
+      }
+
+      .letter-paper {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+      }
+
+      .paper-top {
+        margin-bottom: 20px;
+      }
+
+      .letter-body p {
+        font-size: 10.5pt;
+        line-height: 1.6;
+      }
+
+      .subject {
+        background: white;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top-strip"></div>
+
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="brand">Tinashe<span>.</span></a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        ☰ Menu
+      </button>
+
+      <nav id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="cv.html">CV</a>
+        <a href="individual-reflection.html">Individual Reflection</a>
+        <a href="group-reflection.html">Group Reflection</a>
+        <a href="skills-projects.html">Skills & Projects</a>
+        <a href="application-letter.html" class="active">Application Letter</a>
+        <a href="email-template.html">Email Template</a>
+        <a href="study-resources.html">Study Resources</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <span class="eyebrow">Professional Communication</span>
+      <h1>Opening the Door to <em>Opportunity.</em></h1>
+      <p>
+        A professional application letter introduces my background,
+        communicates my interest and explains what I hope to contribute
+        while learning through an internship in the technology sector.
+      </p>
+    </section>
+
+    <section class="letter-section">
+      <div class="letter-layout">
+
+        <aside class="side-panel">
+          <div class="side-card">
+            <h2>About This Letter</h2>
+            <p>
+              This draft is designed for an internship opportunity in
+              technology, with an interest in data analytics.
+            </p>
+
+            <ul>
+              <li>Professional and respectful tone</li>
+              <li>Highlights transferable skills</li>
+              <li>Explains career interests</li>
+              <li>Shows willingness to learn</li>
+            </ul>
+          </div>
+
+          <div class="tip-card">
+            <h3>Before You Send</h3>
+            <p>
+              Replace the recipient placeholders with the real organisation
+              and contact details. Add the correct date and tailor the letter
+              to the advertised internship.
+            </p>
+          </div>
+        </aside>
+
+        <article class="letter-paper">
+          <div class="paper-top">
+            <div>
+              <div class="sender-name">Tinashe Motshubi</div>
+              <div class="sender-details">
+                Email: tinashepm2007@icloud.com<br>
+                First-Year Student · BIDA Programme
+              </div>
+            </div>
+
+            <span class="document-label">Application Letter</span>
+          </div>
+
+          <p class="letter-date">[Insert date]</p>
+
+          <div class="recipient">
+            The Hiring Manager<br>
+            <strong>[Organisation Name]</strong><br>
+            [Organisation Address]
+          </div>
+
+          <p class="subject">
+            RE: APPLICATION FOR A TECHNOLOGY INTERNSHIP
+          </p>
+
+          <div class="letter-body">
+            <p>Dear Hiring Manager,</p>
+
+            <p>
+              I am writing to express my interest in an internship opportunity
+              within your organisation's technology sector. I am currently a
+              first-year student pursuing a bachelor's degree in the BIDA
+              programme, and I am eager to develop my knowledge, gain practical
+              experience and learn from professionals working in the field.
+            </p>
+
+            <p>
+              I am particularly interested in data analytics and the ways
+              information can be organised, interpreted and used to support
+              informed decisions. My long-term ambition is to become a data
+              analyst and eventually establish my own data analytics firm.
+              I believe that an internship would provide valuable exposure
+              to professional environments and help me understand how
+              classroom learning can be applied to real-world challenges.
+            </p>
+
+            <p>
+              I consider teamwork, punctuality, meeting deadlines,
+              adaptability and attention to detail to be important strengths
+              in my approach to work and learning. My experience participating
+              in student leadership during senior school also helped me
+              appreciate responsibility and the importance of contributing
+              to a shared goal.
+            </p>
+
+            <p>
+              As a developing student, I am aware that I still have much to
+              learn. I would approach an internship with curiosity, a positive
+              attitude and a willingness to receive feedback, follow
+              instructions and take responsibility for assigned tasks.
+              I would welcome the opportunity to observe experienced
+              professionals, strengthen my practical skills and contribute
+              wherever appropriate.
+            </p>
+
+            <p>
+              Thank you for considering my application. I would appreciate
+              the opportunity to discuss how my interests, personal qualities
+              and commitment to learning could align with your organisation's
+              needs. I look forward to the possibility of hearing from you.
+            </p>
+
+            <div class="sign-off">
+              Yours faithfully,
+
+              <div class="signature">Tinashe Motshubi</div>
+              <div class="letter-name">Tinashe Motshubi</div>
+              <div class="sender-details">
+                Email: tinashepm2007@icloud.com
+              </div>
+            </div>
+          </div>
+
+          <div class="action-row">
+            <button class="action-button" onclick="window.print()">
+              Print / Save as PDF
+            </button>
+
+            <button
+              class="action-button secondary"
+              id="copyEmail"
+              type="button"
+            >
+              Copy Email Address
+            </button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="checklist-section">
+      <div class="checklist-inner">
+        <div class="section-heading">
+          <span class="eyebrow">Final Review</span>
+          <h2>Application Checklist</h2>
+          <p>
+            A strong application is accurate, relevant and carefully prepared.
+          </p>
+        </div>
+
+        <div class="checklist">
+          <div class="check-item">
+            <span>✦</span>
+            <p>Confirm the correct programme name and current year of study.</p>
+          </div>
+
+          <div class="check-item">
+            <span>✦</span>
+            <p>Insert the organisation's real name and address.</p>
+          </div>
+
+          <div class="check-item">
+            <span>✦</span>
+            <p>Include the correct date and internship title.</p>
+          </div>
+
+          <div class="check-item">
+            <span>✦</span>
+            <p>Check that the skills mentioned reflect genuine abilities.</p>
+          </div>
+
+          <div class="check-item">
+            <span>✦</span>
+            <p>Attach a current CV if the organisation requests one.</p>
+          </div>
+
+          <div class="check-item">
+            <span>✦</span>
+            <p>Proofread the final letter before sending it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <h2>Every Opportunity Starts with a First Step.</h2>
+      <p>
+        Preparing a professional application is part of developing the
+        confidence and communication skills needed to move from student
+        life into the world of work.
+      </p>
+
+      <a href="email-template.html" class="next-link">
+        Continue to My Email Template →
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Tinashe Motshubi</strong> · Digital Learning Portfolio</p>
+    <p>Preparing today for the opportunities of tomorrow.</p>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
+
+    menuToggle.addEventListener("click", function () {
+      const isOpen = mainNav.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", isOpen);
+    });
+
+    mainNav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        mainNav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    document.getElementById("copyEmail").addEventListener("click", async function () {
+      const email = "tinashepm2007@icloud.com";
+
+      try {
+        await navigator.clipboard.writeText(email);
+        this.textContent = "Email Copied!";
+      } catch (error) {
+        window.prompt("Copy this email address:", email);
+      }
+    });
+  </script>
+</body>
+</html>
