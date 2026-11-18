@@ -1,0 +1,1394 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tinashe Motshubi's academic study resources, learning strategies and data analytics roadmap.">
+  <title>Study Resources | Tinashe Motshubi</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #fbf8f2;
+      --white: #ffffff;
+      --purple: #68468b;
+      --deep-purple: #422b5d;
+      --lilac: #eee5f7;
+      --soft-lilac: #f6f0fb;
+      --blue: #e7eff9;
+      --blue-text: #405b7b;
+      --yellow: #f5e8b9;
+      --silver: #d9d4df;
+      --text: #332d3b;
+      --muted: #77717e;
+      --border: #e9e2eb;
+      --shadow: 0 15px 40px rgba(67, 43, 92, 0.07);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(251, 248, 242, 0.96);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      min-height: 76px;
+      padding: 14px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      text-decoration: none;
+      font-family: "Playfair Display", serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--deep-purple);
+      white-space: nowrap;
+    }
+
+    .brand span {
+      color: var(--purple);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+      padding: 7px 10px;
+      border-radius: 30px;
+      font-size: 0.77rem;
+      transition: 0.25s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      background: var(--lilac);
+      color: var(--deep-purple);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: var(--lilac);
+      border: 1px solid var(--silver);
+      border-radius: 10px;
+      padding: 9px 13px;
+      color: var(--deep-purple);
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .container {
+      width: min(1080px, 90%);
+      margin: auto;
+    }
+
+    .hero {
+      padding: 78px 0 65px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 290px;
+      height: 290px;
+      border-radius: 50%;
+      background: var(--lilac);
+      top: -140px;
+      right: -80px;
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1.35fr 0.65fr;
+      gap: 45px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--purple);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      margin-bottom: 17px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Playfair Display", serif;
+      line-height: 1.2;
+      color: var(--deep-purple);
+    }
+
+    h1 {
+      font-size: clamp(2.7rem, 6vw, 4.7rem);
+      letter-spacing: -1.5px;
+      margin-bottom: 22px;
+    }
+
+    h1 em {
+      color: var(--purple);
+      font-weight: 500;
+    }
+
+    .hero-description {
+      max-width: 620px;
+      color: var(--muted);
+      font-size: 1rem;
+      margin-bottom: 27px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 19px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 0.84rem;
+      font-weight: 700;
+      transition: 0.25s ease;
+      border: 1px solid var(--purple);
+    }
+
+    .button-primary {
+      background: var(--purple);
+      color: white;
+    }
+
+    .button-secondary {
+      color: var(--deep-purple);
+      background: transparent;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 25px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+      transform: rotate(1deg);
+    }
+
+    .hero-card .symbol {
+      width: 56px;
+      height: 56px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      background: var(--yellow);
+      font-size: 1.7rem;
+      margin-bottom: 22px;
+    }
+
+    .hero-card h2 {
+      font-size: 1.55rem;
+      margin-bottom: 12px;
+    }
+
+    .hero-card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .hero-card .mini-label {
+      margin-top: 23px;
+      display: inline-block;
+      background: var(--blue);
+      color: var(--blue-text);
+      padding: 7px 12px;
+      border-radius: 20px;
+      font-size: 0.74rem;
+      font-weight: 700;
+    }
+
+    section.content-section {
+      padding: 65px 0;
+    }
+
+    .section-heading {
+      max-width: 650px;
+      margin-bottom: 32px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      margin-bottom: 13px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    .study-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 19px;
+    }
+
+    .study-card {
+      background: var(--white);
+      padding: 25px;
+      border: 1px solid var(--border);
+      border-radius: 19px;
+      transition: 0.25s ease;
+    }
+
+    .study-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .card-number {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--purple);
+      letter-spacing: 2px;
+      margin-bottom: 14px;
+    }
+
+    .study-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 11px;
+    }
+
+    .study-card p {
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    .tip {
+      margin-top: 15px;
+      padding: 12px 14px;
+      border-radius: 11px;
+      background: var(--soft-lilac);
+      color: var(--deep-purple);
+      font-size: 0.8rem;
+    }
+
+    .resources-section {
+      background: var(--white);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .resource-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 15px;
+    }
+
+    .resource-item {
+      display: flex;
+      gap: 17px;
+      align-items: flex-start;
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--cream);
+    }
+
+    .resource-icon {
+      flex: 0 0 43px;
+      width: 43px;
+      height: 43px;
+      border-radius: 13px;
+      display: grid;
+      place-items: center;
+      background: var(--lilac);
+      font-size: 1.25rem;
+    }
+
+    .resource-item h3 {
+      font-size: 1.15rem;
+      margin-bottom: 6px;
+    }
+
+    .resource-item p {
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-bottom: 10px;
+    }
+
+    .resource-link {
+      color: var(--purple);
+      font-weight: 700;
+      font-size: 0.82rem;
+      text-decoration: none;
+      border-bottom: 1px solid var(--silver);
+      padding-bottom: 2px;
+    }
+
+    .resource-link:hover {
+      color: var(--deep-purple);
+      border-color: var(--purple);
+    }
+
+    .roadmap {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      counter-reset: roadmap;
+    }
+
+    .roadmap-card {
+      counter-increment: roadmap;
+      padding: 23px 20px;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: var(--white);
+    }
+
+    .roadmap-card::before {
+      content: "0" counter(roadmap);
+      display: block;
+      font-size: 0.78rem;
+      letter-spacing: 2px;
+      font-weight: 700;
+      color: var(--purple);
+      margin-bottom: 20px;
+    }
+
+    .roadmap-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 11px;
+    }
+
+    .roadmap-card p {
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+
+    .roadmap-card:nth-child(2) {
+      background: var(--blue);
+    }
+
+    .roadmap-card:nth-child(3) {
+      background: var(--lilac);
+    }
+
+    .roadmap-card:nth-child(4) {
+      background: #fbf2d7;
+    }
+
+    .planner-section {
+      background: #f0eaf6;
+    }
+
+    .planner-layout {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 35px;
+      align-items: start;
+    }
+
+    .planner-intro h2 {
+      font-size: clamp(2rem, 4vw, 2.7rem);
+      margin-bottom: 17px;
+    }
+
+    .planner-intro p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .planner-note {
+      background: var(--white);
+      border-left: 4px solid var(--purple);
+      padding: 17px;
+      border-radius: 0 12px 12px 0;
+      font-size: 0.86rem;
+    }
+
+    .planner {
+      background: var(--white);
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      padding: 25px;
+      box-shadow: var(--shadow);
+    }
+
+    .planner h3 {
+      font-size: 1.5rem;
+      margin-bottom: 7px;
+    }
+
+    .planner > p {
+      color: var(--muted);
+      font-size: 0.84rem;
+      margin-bottom: 20px;
+    }
+
+    .planner-row {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 13px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .planner-row:last-of-type {
+      border-bottom: 0;
+    }
+
+    .planner-row input {
+      margin-top: 7px;
+      width: 17px;
+      height: 17px;
+      accent-color: var(--purple);
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+
+    .planner-row label {
+      cursor: pointer;
+      font-size: 0.88rem;
+    }
+
+    .planner-row label strong {
+      display: block;
+      color: var(--deep-purple);
+    }
+
+    .planner-row label span {
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    .progress-area {
+      margin-top: 22px;
+    }
+
+    .progress-text {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 0.8rem;
+      margin-bottom: 9px;
+      color: var(--deep-purple);
+      font-weight: 700;
+    }
+
+    .progress-track {
+      height: 9px;
+      border-radius: 10px;
+      background: var(--lilac);
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      width: 0%;
+      height: 100%;
+      background: var(--purple);
+      transition: width 0.25s ease;
+    }
+
+    .planner-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .small-button {
+      border: 1px solid var(--silver);
+      border-radius: 25px;
+      padding: 10px 15px;
+      background: var(--cream);
+      color: var(--deep-purple);
+      font: inherit;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .small-button:hover {
+      background: var(--lilac);
+    }
+
+    .integrity-box {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 29px;
+      display: grid;
+      grid-template-columns: 0.6fr 1.4fr;
+      gap: 25px;
+      align-items: center;
+    }
+
+    .integrity-box h2 {
+      font-size: 2rem;
+    }
+
+    .integrity-box p {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .integrity-points {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 15px;
+    }
+
+    .integrity-point {
+      background: var(--soft-lilac);
+      padding: 13px;
+      border-radius: 11px;
+      font-size: 0.82rem;
+    }
+
+    .integrity-point strong {
+      color: var(--deep-purple);
+    }
+
+    .closing {
+      padding: 75px 0;
+      text-align: center;
+    }
+
+    .closing h2 {
+      max-width: 700px;
+      margin: 0 auto 17px;
+      font-size: clamp(2.1rem, 4vw, 3.1rem);
+    }
+
+    .closing p {
+      max-width: 610px;
+      margin: 0 auto 25px;
+      color: var(--muted);
+    }
+
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 25px 5%;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    .site-footer a {
+      color: var(--purple);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    @media (max-width: 950px) {
+      .nav-container {
+        flex-wrap: wrap;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        width: 100%;
+        align-items: stretch;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 10px 13px;
+      }
+
+      .hero-layout,
+      .planner-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        max-width: 520px;
+        transform: none;
+      }
+
+      .roadmap {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 650px) {
+      .hero {
+        padding: 52px 0 45px;
+      }
+
+      section.content-section {
+        padding: 48px 0;
+      }
+
+      .study-grid,
+      .resource-list,
+      .roadmap,
+      .integrity-box,
+      .integrity-points {
+        grid-template-columns: 1fr;
+      }
+
+      .study-card,
+      .resource-item,
+      .planner {
+        padding: 20px;
+      }
+
+      .integrity-box {
+        gap: 17px;
+      }
+
+      .hero-buttons .button {
+        text-align: center;
+      }
+    }
+
+    @media print {
+      .site-header,
+      .hero-buttons,
+      .planner-actions,
+      .site-footer {
+        display: none !important;
+      }
+
+      body {
+        background: white;
+      }
+
+      .hero,
+      section.content-section,
+      .closing {
+        padding: 25px 0;
+      }
+
+      .study-card,
+      .resource-item,
+      .roadmap-card,
+      .planner,
+      .integrity-box {
+        break-inside: avoid;
+        box-shadow: none;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="nav-container">
+      <a class="brand" href="index.html">Tinashe<span>.</span></a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-expanded="false"
+        aria-controls="navLinks"
+        aria-label="Open navigation menu"
+        type="button">
+        ☰ Menu
+      </button>
+
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="cv.html">CV</a>
+        <a href="individual-reflection.html">Individual Reflection</a>
+        <a href="group-reflection.html">Group Reflection</a>
+        <a href="skills-projects.html">Skills & Projects</a>
+        <a href="application-letter.html">Application Letter</a>
+        <a href="email-template.html">Email Template</a>
+        <a href="study-resources.html" class="active" aria-current="page">Study Resources</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-layout">
+
+        <div>
+          <span class="eyebrow">The Learning Edit · 08</span>
+
+          <h1>Study smart.<br><em>Think bigger.</em></h1>
+
+          <p class="hero-description">
+            Learning is not just about spending hours with a textbook.
+            It is about asking better questions, building useful habits,
+            exploring new ideas and developing the confidence to turn
+            knowledge into something meaningful.
+          </p>
+
+          <p class="hero-description">
+            This is my personal academic toolkit as a first-year BIDA
+            student, with strategies for my studies today and a roadmap
+            towards my future in data analytics.
+          </p>
+
+          <div class="hero-buttons">
+            <a class="button button-primary" href="#study-toolkit">
+              Explore Study Methods
+            </a>
+            <a class="button button-secondary" href="#study-planner">
+              Open Study Planner
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <div class="symbol" aria-hidden="true">✦</div>
+          <span class="eyebrow">My learning philosophy</span>
+          <h2>Curiosity is a superpower.</h2>
+          <p>
+            I want to understand the ideas behind what I learn, connect
+            theory to real situations and remain willing to learn from
+            mistakes.
+          </p>
+          <span class="mini-label">Learn · Practise · Improve</span>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- STUDY TOOLKIT -->
+    <section class="content-section" id="study-toolkit">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">01 / The essentials</span>
+          <h2>Build a study system that works for you.</h2>
+          <p>
+            These methods can make studying more structured and help me
+            move beyond simply rereading information.
+          </p>
+        </div>
+
+        <div class="study-grid">
+
+          <article class="study-card">
+            <div class="card-number">METHOD 01</div>
+            <h3>Active Recall</h3>
+            <p>
+              Close the textbook and try to explain a concept from memory.
+              Answer questions without looking at the notes, then check
+              what needs improvement.
+            </p>
+            <div class="tip">
+              <strong>Try this:</strong> Write five questions after each
+              lecture and answer them the next day.
+            </div>
+          </article>
+
+          <article class="study-card">
+            <div class="card-number">METHOD 02</div>
+            <h3>Spaced Repetition</h3>
+            <p>
+              Review material over several days instead of trying to
+              memorise everything in one long session.
+            </p>
+            <div class="tip">
+              <strong>Try this:</strong> Review a topic today, tomorrow,
+              later in the week and again before an assessment.
+            </div>
+          </article>
+
+          <article class="study-card">
+            <div class="card-number">METHOD 03</div>
+            <h3>Pomodoro Sessions</h3>
+            <p>
+              Work with full attention for a manageable period, then take
+              a short break. Adjust the timing to suit the task and your
+              concentration.
+            </p>
+            <div class="tip">
+              <strong>Try this:</strong> Start with 25 minutes of focused
+              study followed by a five-minute break.
+            </div>
+          </article>
+
+          <article class="study-card">
+            <div class="card-number">METHOD 04</div>
+            <h3>Mind Maps</h3>
+            <p>
+              Connect related ideas visually. This can help organise
+              complicated topics and show how concepts relate to one
+              another.
+            </p>
+            <div class="tip">
+              <strong>Try this:</strong> Put the main topic in the centre
+              and branch out into definitions, examples and applications.
+            </div>
+          </article>
+
+          <article class="study-card">
+            <div class="card-number">METHOD 05</div>
+            <h3>Practice Questions</h3>
+            <p>
+              Test understanding through exercises, worked examples,
+              quizzes and past assessments when they are available and
+              permitted.
+            </p>
+            <div class="tip">
+              <strong>Try this:</strong> Keep a list of mistakes and write
+              down how you would solve each question correctly.
+            </div>
+          </article>
+
+          <article class="study-card">
+            <div class="card-number">METHOD 06</div>
+            <h3>Collaborative Learning</h3>
+            <p>
+              Discuss difficult ideas with classmates, explain concepts
+              to each other and share different approaches to solving
+              problems.
+            </p>
+            <div class="tip">
+              <strong>Try this:</strong> Give each group member a topic to
+              explain during a revision session.
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ONLINE RESOURCES -->
+    <section class="content-section resources-section" id="online-resources">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">02 / The digital library</span>
+          <h2>Useful places to learn and explore.</h2>
+          <p>
+            These external resources can support my academic development
+            and introduce me to tools used in technology and data work.
+            Some offer free learning materials, while others also have
+            paid options.
+          </p>
+        </div>
+
+        <div class="resource-list">
+
+          <article class="resource-item">
+            <div class="resource-icon" aria-hidden="true">📚</div>
+            <div>
+              <h3>Khan Academy</h3>
+              <p>
+                Learn and revise mathematics, statistics and other
+                foundational subjects through lessons and practice.
+              </p>
+              <a class="resource-link"
+                 href="https://www.khanacademy.org/"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                Explore Khan Academy ↗
+              </a>
+            </div>
+          </article>
+
+          <article class="resource-item">
+            <div class="resource-icon" aria-hidden="true">🔎</div>
+            <div>
+              <h3>Google Scholar</h3>
+              <p>
+                Search for scholarly articles, academic publications and
+                research that may support assignments and investigations.
+              </p>
+              <a class="resource-link"
+                 href="https://scholar.google.com/"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                Search academic research ↗
+              </a>
+            </div>
+          </article>
+
+          <article class="resource-item">
+            <div class="resource-icon" aria-hidden="true">📊</div>
+            <div>
+              <h3>Kaggle Learn</h3>
+              <p>
+                Explore practical introductory lessons in Python, data
+                visualisation, pandas and machine learning.
+              </p>
+              <a class="resource-link"
+                 href="https://www.kaggle.com/learn"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                Explore data lessons ↗
+              </a>
+            </div>
+          </article>
+
+          <article class="resource-item">
+            <div class="resource-icon" aria-hidden="true">🐍</div>
+            <div>
+              <h3>Python Documentation</h3>
+              <p>
+                Use the official Python tutorial as a reference when
+                beginning to learn programming and working through
+                practical examples.
+              </p>
+              <a class="resource-link"
+                 href="https://docs.python.org/3/tutorial/"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                Read the Python tutorial ↗
+              </a>
+            </div>
+          </article>
+
+          <article class="resource-item">
+            <div class="resource-icon" aria-hidden="true">💻</div>
+            <div>
+              <h3>W3Schools</h3>
+              <p>
+                Practise introductory web technologies and explore
+                programming tutorials with examples.
+              </p>
+              <a class="resource-link"
+                 href="https://www.w3schools.com/"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                Explore tutorials ↗
+              </a>
+            </div>
+          </article>
+
+          <article class="resource-item">
+            <div class="resource-icon" aria-hidden="true">📈</div>
+            <div>
+              <h3>Microsoft Excel Help</h3>
+              <p>
+                Learn about formulas, tables, sorting, filtering, charts
+                and other spreadsheet features useful for organising data.
+              </p>
+              <a class="resource-link"
+                 href="https://support.microsoft.com/excel"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                Explore Excel support ↗
+              </a>
+            </div>
+          </article>
+
+          <article class="resource-item">
+            <div class="resource-icon" aria-hidden="true">🗂️</div>
+            <div>
+              <h3>Zotero</h3>
+              <p>
+                Explore a reference-management tool that can help organise
+                research sources and create citations and bibliographies.
+              </p>
+              <a class="resource-link"
+                 href="https://www.zotero.org/"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                Discover Zotero ↗
+              </a>
+            </div>
+          </article>
+
+          <article class="resource-item">
+            <div class="resource-icon" aria-hidden="true">🚀</div>
+            <div>
+              <h3>freeCodeCamp</h3>
+              <p>
+                Practise programming and web development through
+                structured lessons and hands-on coding exercises.
+              </p>
+              <a class="resource-link"
+                 href="https://www.freecodecamp.org/"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                Start exploring ↗
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CAREER ROADMAP -->
+    <section class="content-section" id="data-roadmap">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">03 / The bigger picture</span>
+          <h2>My roadmap towards data analytics.</h2>
+          <p>
+            My long-term ambition is to become a data analyst and
+            eventually establish my own data analytics firm. This is a
+            learning roadmap I can work towards progressively, rather
+            than a list of skills I am claiming to have already mastered.
+          </p>
+        </div>
+
+        <div class="roadmap">
+
+          <article class="roadmap-card">
+            <h3>Build the foundations</h3>
+            <p>
+              Strengthen mathematics, statistics, logical reasoning and
+              the ability to interpret information accurately.
+            </p>
+          </article>
+
+          <article class="roadmap-card">
+            <h3>Learn spreadsheets</h3>
+            <p>
+              Practise organising data, using formulas, cleaning tables
+              and creating charts with spreadsheet tools.
+            </p>
+          </article>
+
+          <article class="roadmap-card">
+            <h3>Explore coding</h3>
+            <p>
+              Progress into Python, data manipulation and introductory
+              database skills such as SQL.
+            </p>
+          </article>
+
+          <article class="roadmap-card">
+            <h3>Create a portfolio</h3>
+            <p>
+              Work on small projects using appropriate datasets, explain
+              the findings clearly and keep improving through feedback.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE STUDY PLANNER -->
+    <section class="content-section planner-section" id="study-planner">
+      <div class="container planner-layout">
+
+        <div class="planner-intro">
+          <span class="eyebrow">04 / Put it into practice</span>
+          <h2>A little progress, consistently.</h2>
+
+          <p>
+            A useful study plan should be realistic. Instead of trying to
+            do everything in one day, I can break my workload into
+            manageable actions and make time for rest.
+          </p>
+
+          <p>
+            Use this checklist as a simple study-session guide. Tick off
+            each task as you complete it and watch your progress update.
+          </p>
+
+          <div class="planner-note">
+            <strong>My reminder:</strong> I do not need to understand
+            everything immediately. I need to remain curious, practise
+            consistently and ask for help when necessary.
+          </div>
+        </div>
+
+        <div class="planner">
+          <h3>My study session</h3>
+          <p>Choose the tasks you have completed today.</p>
+
+          <div class="planner-row">
+            <input type="checkbox" id="task1">
+            <label for="task1">
+              <strong>Set a clear goal</strong>
+              <span>Choose one topic or task to focus on.</span>
+            </label>
+          </div>
+
+          <div class="planner-row">
+            <input type="checkbox" id="task2">
+            <label for="task2">
+              <strong>Review my notes</strong>
+              <span>Identify the key ideas and anything unclear.</span>
+            </label>
+          </div>
+
+          <div class="planner-row">
+            <input type="checkbox" id="task3">
+            <label for="task3">
+              <strong>Practise from memory</strong>
+              <span>Answer questions without immediately checking notes.</span>
+            </label>
+          </div>
+
+          <div class="planner-row">
+            <input type="checkbox" id="task4">
+            <label for="task4">
+              <strong>Complete a practice activity</strong>
+              <span>Attempt exercises or apply the concept to an example.</span>
+            </label>
+          </div>
+
+          <div class="planner-row">
+            <input type="checkbox" id="task5">
+            <label for="task5">
+              <strong>Record what I learned</strong>
+              <span>Write a short summary and note questions for later.</span>
+            </label>
+          </div>
+
+          <div class="planner-row">
+            <input type="checkbox" id="task6">
+            <label for="task6">
+              <strong>Plan my next session</strong>
+              <span>Choose the next topic and schedule a review.</span>
+            </label>
+          </div>
+
+          <div class="progress-area">
+            <div class="progress-text">
+              <span>Session progress</span>
+              <span id="progressLabel">0 of 6 completed</span>
+            </div>
+            <div
+              class="progress-track"
+              role="progressbar"
+              aria-label="Study session completion"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-valuenow="0"
+              id="progressTrack">
+              <div class="progress-fill" id="progressFill"></div>
+            </div>
+          </div>
+
+          <div class="planner-actions">
+            <button class="small-button" id="resetPlanner" type="button">
+              Reset checklist
+            </button>
+            <button class="small-button" id="printPage" type="button">
+              Print / Save as PDF
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ACADEMIC INTEGRITY -->
+    <section class="content-section" id="academic-integrity">
+      <div class="container">
+
+        <div class="integrity-box">
+          <div>
+            <span class="eyebrow">05 / My principles</span>
+            <h2>Learn with integrity.</h2>
+          </div>
+
+          <div>
+            <p>
+              Academic growth is about more than achieving results.
+              It also means being honest about my work, respecting other
+              people's ideas and taking responsibility for my learning.
+            </p>
+
+            <div class="integrity-points">
+              <div class="integrity-point">
+                <strong>01 · Give credit</strong><br>
+                Acknowledge sources and cite ideas that are not my own.
+              </div>
+
+              <div class="integrity-point">
+                <strong>02 · Be original</strong><br>
+                Explain concepts in my own words and submit my own work.
+              </div>
+
+              <div class="integrity-point">
+                <strong>03 · Verify information</strong><br>
+                Check facts and use credible academic sources.
+              </div>
+
+              <div class="integrity-point">
+                <strong>04 · Use tools responsibly</strong><br>
+                Follow institutional rules when using AI and other tools.
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CLOSING -->
+    <section class="closing">
+      <div class="container">
+        <span class="eyebrow">The next chapter</span>
+
+        <h2>Every skill I build today creates possibilities for tomorrow.</h2>
+
+        <p>
+          I am still learning, exploring and discovering the kind of
+          professional I want to become. With curiosity, discipline and
+          a willingness to grow, I can turn my academic journey into
+          meaningful opportunities.
+        </p>
+
+        <a class="button button-primary" href="index.html">
+          Return to My Portfolio
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      © <span id="currentYear">2026</span> Tinashe Motshubi
+      · Study Resources
+      · <a href="index.html">Back to Home</a>
+    </p>
+  </footer>
+
+  <script>
+    // Mobile navigation
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", function () {
+      const isOpen = navLinks.classList.toggle("open");
+
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+      );
+      menuToggle.textContent = isOpen ? "✕ Close" : "☰ Menu";
+    });
+
+    navLinks.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+        menuToggle.textContent = "☰ Menu";
+      });
+    });
+
+    // Interactive study checklist
+    const taskCheckboxes = Array.from(
+      document.querySelectorAll('.planner-row input[type="checkbox"]')
+    );
+
+    const progressLabel = document.getElementById("progressLabel");
+    const progressFill = document.getElementById("progressFill");
+    const progressTrack = document.getElementById("progressTrack");
+
+    function updateProgress() {
+      const completed = taskCheckboxes.filter(function (checkbox) {
+        return checkbox.checked;
+      }).length;
+
+      const total = taskCheckboxes.length;
+      const percentage = total ? (completed / total) * 100 : 0;
+
+      progressLabel.textContent = completed + " of " + total + " completed";
+      progressFill.style.width = percentage + "%";
+      progressTrack.setAttribute("aria-valuenow", String(Math.round(percentage)));
+
+      if (completed === total) {
+        progressLabel.textContent = "All tasks completed!";
+      }
+    }
+
+    taskCheckboxes.forEach(function (checkbox) {
+      checkbox.addEventListener("change", updateProgress);
+    });
+
+    document.getElementById("resetPlanner").addEventListener("click", function () {
+      taskCheckboxes.forEach(function (checkbox) {
+        checkbox.checked = false;
+      });
+
+      updateProgress();
+    });
+
+    // Print or save the page as a PDF
+    document.getElementById("printPage").addEventListener("click", function () {
+      window.print();
+    });
+
+    // Automatically update the footer year
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
