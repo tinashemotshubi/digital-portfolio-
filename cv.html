@@ -1,0 +1,1104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#faf7f0">
+  <meta name="description" content="The curriculum vitae of Tinashe Motshubi, a first-year BIDA student and aspiring data analyst.">
+  <title>Curriculum Vitae | Tinashe Motshubi</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #faf7f0;
+      --white: #ffffff;
+      --lilac: #dfd0fa;
+      --purple: #8c6bc4;
+      --purple-dark: #554078;
+      --blue: #c8e5f5;
+      --yellow: #f6df91;
+      --silver: #d5d8df;
+      --ink: #30283b;
+      --muted: #746b7d;
+      --line: #e8e1eb;
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "DM Sans", Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .announcement {
+      padding: 9px 15px;
+      background: var(--purple-dark);
+      color: white;
+      text-align: center;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(250, 247, 240, .96);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      max-width: 1150px;
+      margin: auto;
+      padding: 16px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      font-family: var(--serif);
+      font-size: 23px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .brand span {
+      color: var(--purple);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 23px;
+    }
+
+    .nav-links a {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--muted);
+      transition: color .2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--purple);
+    }
+
+    .nav-links .nav-cta {
+      padding: 10px 17px;
+      border-radius: 30px;
+      background: var(--ink);
+      color: white;
+    }
+
+    .nav-links .nav-cta:hover {
+      background: var(--purple);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      background: white;
+      color: var(--ink);
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .page-hero {
+      padding: 75px 5% 65px;
+      background: var(--lilac);
+    }
+
+    .page-hero-inner {
+      max-width: 1050px;
+      margin: auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--purple-dark);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 24px;
+      height: 2px;
+      background: var(--purple);
+    }
+
+    .page-hero h1 {
+      max-width: 850px;
+      margin: 18px 0;
+      font-family: var(--serif);
+      font-size: clamp(45px, 8vw, 82px);
+      font-weight: 500;
+      line-height: 1.06;
+      letter-spacing: -2px;
+    }
+
+    .page-hero h1 em {
+      color: var(--purple-dark);
+    }
+
+    .page-hero p {
+      max-width: 620px;
+      color: #5b5269;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .pill {
+      padding: 8px 14px;
+      border: 1px solid rgba(85,64,120,.25);
+      border-radius: 30px;
+      color: var(--purple-dark);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 65px 5% 90px;
+    }
+
+    .cv-top {
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 22px;
+      margin-bottom: 25px;
+    }
+
+    .profile-card {
+      padding: 35px;
+      border: 1px solid var(--line);
+      border-radius: 25px;
+      background: white;
+    }
+
+    .profile-card h2 {
+      margin-bottom: 12px;
+      font-family: var(--serif);
+      font-size: 32px;
+      font-weight: 600;
+    }
+
+    .profile-card p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 2;
+    }
+
+    .profile-card .mini-label {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--purple);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .contact-card {
+      padding: 30px;
+      border-radius: 25px;
+      background: var(--blue);
+    }
+
+    .contact-card h3 {
+      margin-bottom: 17px;
+      font-family: var(--serif);
+      font-size: 24px;
+    }
+
+    .contact-line {
+      overflow-wrap: anywhere;
+      margin-top: 12px;
+      color: #4d5965;
+      font-size: 12px;
+    }
+
+    .contact-line strong {
+      display: block;
+      margin-bottom: 2px;
+      color: var(--ink);
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .section-heading {
+      margin: 50px 0 22px;
+    }
+
+    .section-heading .eyebrow {
+      margin-bottom: 8px;
+    }
+
+    .section-heading h2 {
+      font-family: var(--serif);
+      font-size: 35px;
+      font-weight: 500;
+      letter-spacing: -.8px;
+    }
+
+    .section-heading h2 em {
+      color: var(--purple);
+    }
+
+    .education-list {
+      display: grid;
+      gap: 13px;
+    }
+
+    .education-item {
+      display: grid;
+      grid-template-columns: 125px 1fr auto;
+      align-items: center;
+      gap: 20px;
+      padding: 23px 25px;
+      border: 1px solid var(--line);
+      border-radius: 19px;
+      background: white;
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .education-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(48,40,59,.05);
+    }
+
+    .education-year {
+      color: var(--purple-dark);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .education-item h3 {
+      margin-bottom: 4px;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .education-item p {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .education-badge {
+      padding: 7px 11px;
+      border-radius: 30px;
+      background: var(--lilac);
+      color: var(--purple-dark);
+      font-size: 10px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .education-item:nth-child(2) .education-badge {
+      background: var(--yellow);
+      color: var(--ink);
+    }
+
+    .education-item:nth-child(3) .education-badge {
+      background: var(--blue);
+      color: var(--ink);
+    }
+
+    .education-item:nth-child(4) .education-badge {
+      background: #e9eaf0;
+      color: var(--ink);
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      margin-top: 45px;
+    }
+
+    .info-panel {
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: white;
+    }
+
+    .info-panel.soft {
+      background: var(--yellow);
+      border-color: transparent;
+    }
+
+    .info-panel h3 {
+      margin-bottom: 20px;
+      font-family: var(--serif);
+      font-size: 27px;
+      font-weight: 500;
+    }
+
+    .qualification-list,
+    .experience-list {
+      display: grid;
+      gap: 13px;
+      list-style: none;
+    }
+
+    .qualification-list li,
+    .experience-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+      font-size: 13px;
+    }
+
+    .check {
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--lilac);
+      color: var(--purple-dark);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .info-panel.soft .check {
+      background: white;
+    }
+
+    .experience-list strong {
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .experience-list small {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.7;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .skill-card {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 19px;
+      background: white;
+    }
+
+    .skill-card .skill-symbol {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      margin-bottom: 15px;
+      border-radius: 14px;
+      background: var(--lilac);
+      font-size: 19px;
+    }
+
+    .skill-card:nth-child(2) .skill-symbol {
+      background: var(--blue);
+    }
+
+    .skill-card:nth-child(3) .skill-symbol {
+      background: var(--yellow);
+    }
+
+    .skill-card:nth-child(4) .skill-symbol {
+      background: #e9eaf0;
+    }
+
+    .skill-card h3 {
+      margin-bottom: 7px;
+      font-size: 14px;
+    }
+
+    .skill-card p {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .career-card {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 25px;
+      margin-top: 45px;
+      padding: 35px;
+      border-radius: 25px;
+      background: var(--purple-dark);
+      color: white;
+    }
+
+    .career-card .eyebrow {
+      color: var(--yellow);
+    }
+
+    .career-card .eyebrow::before {
+      background: var(--yellow);
+    }
+
+    .career-card h2 {
+      margin: 12px 0;
+      font-family: var(--serif);
+      font-size: clamp(29px, 4vw, 43px);
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .career-card p {
+      max-width: 650px;
+      color: #e7dff2;
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    .career-icon {
+      display: grid;
+      place-items: center;
+      width: 85px;
+      height: 85px;
+      border-radius: 50%;
+      background: var(--yellow);
+      color: var(--ink);
+      font-size: 35px;
+    }
+
+    .cv-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 20px;
+      border: 1px solid var(--ink);
+      border-radius: 30px;
+      background: var(--ink);
+      color: white;
+      font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background .2s, transform .2s;
+    }
+
+    .button:hover {
+      background: var(--purple);
+      border-color: var(--purple);
+      transform: translateY(-2px);
+    }
+
+    .button-outline {
+      background: transparent;
+      color: var(--ink);
+      border-color: var(--silver);
+    }
+
+    .button-outline:hover {
+      background: white;
+      color: var(--ink);
+      border-color: var(--silver);
+    }
+
+    footer {
+      padding: 28px 5%;
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-inner {
+      max-width: 1050px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .footer-brand {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .footer-brand span {
+      color: var(--purple);
+    }
+
+    .footer-inner p {
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 16px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .footer-links a:hover {
+      color: var(--purple);
+    }
+
+    @media print {
+      body {
+        background: white;
+        color: #222;
+        font-size: 10pt;
+      }
+
+      .announcement,
+      .navbar,
+      .cv-actions,
+      footer {
+        display: none !important;
+      }
+
+      .page-hero {
+        padding: 25px 0;
+        background: white;
+      }
+
+      .page-hero h1 {
+        font-size: 34pt;
+      }
+
+      .container {
+        max-width: 100%;
+        padding: 20px 0;
+      }
+
+      .profile-card,
+      .contact-card,
+      .info-panel,
+      .skill-card,
+      .education-item,
+      .career-card {
+        break-inside: avoid;
+        box-shadow: none;
+      }
+
+      .career-card {
+        background: #eee;
+        color: #222;
+      }
+
+      .career-card p {
+        color: #444;
+      }
+
+      .section-heading {
+        margin-top: 25px;
+      }
+
+      .education-item {
+        padding: 12px;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    @media (max-width: 850px) {
+      .nav-links {
+        gap: 12px;
+      }
+
+      .nav-links a {
+        font-size: 11px;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .nav-inner {
+        padding: 13px 5%;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 15px 5% 22px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: var(--cream);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 12px 0;
+        font-size: 13px;
+      }
+
+      .nav-links .nav-cta {
+        margin-top: 8px;
+        padding: 12px;
+        text-align: center;
+      }
+
+      .page-hero {
+        padding: 55px 5%;
+      }
+
+      .container {
+        padding-top: 40px;
+        padding-bottom: 60px;
+      }
+
+      .cv-top,
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+
+      .education-item {
+        grid-template-columns: 1fr auto;
+        gap: 8px 14px;
+        padding: 19px;
+      }
+
+      .education-year {
+        grid-column: 1 / -1;
+      }
+
+      .education-badge {
+        grid-column: 2;
+        grid-row: 2;
+      }
+
+      .education-item > div:nth-child(2) {
+        grid-column: 1;
+        grid-row: 2;
+      }
+
+      .career-card {
+        grid-template-columns: 1fr;
+      }
+
+      .career-icon {
+        width: 65px;
+        height: 65px;
+        font-size: 28px;
+      }
+
+      .footer-inner {
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-card,
+      .contact-card,
+      .info-panel,
+      .career-card {
+        padding: 24px;
+      }
+
+      .footer-links {
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="announcement">
+    The résumé · The ambition · The journey ✦
+  </div>
+
+  <header class="navbar">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a class="brand" href="index.html">Tinashe<span>.</span></a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="navLinks"
+      >☰</button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home & About</a>
+        <a href="cv.html" class="active">CV</a>
+        <a href="individual-reflection.html">Reflection</a>
+        <a href="group-reflection.html">Group work</a>
+        <a href="skills-projects.html">Skills & Projects</a>
+        <a href="application-letter.html" class="nav-cta">My next chapter ↗</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <span class="eyebrow">Personal portfolio · 01</span>
+        <h1>My journey.<br><em>My qualifications.</em></h1>
+        <p>
+          A snapshot of my academic journey, transferable skills, leadership
+          experience and aspirations as I work towards a future in data analytics.
+        </p>
+
+        <div class="hero-meta">
+          <span class="pill">Tinashe Motshubi</span>
+          <span class="pill">BIDA · Year One</span>
+          <span class="pill">Aspiring Data Analyst</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+
+      <!-- PROFILE AND CONTACT -->
+      <section class="cv-top">
+        <article class="profile-card">
+          <span class="mini-label">Professional profile</span>
+          <h2>Tinashe Motshubi</h2>
+          <p>
+            I am a first-year bachelor's degree student in BIDA with an interest
+            in technology, analytical thinking and using information to solve
+            problems. I am quirky, easygoing and empathetic, and I value
+            collaboration, punctuality and continuous learning.
+          </p>
+          <p style="margin-top: 12px;">
+            I am looking forward to gaining practical exposure, strengthening
+            my professional abilities and building a career in data analytics.
+          </p>
+        </article>
+
+        <aside class="contact-card">
+          <h3>Let's connect.</h3>
+
+          <div class="contact-line">
+            <strong>Email</strong>
+            <a href="mailto:tinashepm2007@icloud.com">tinashepm2007@icloud.com</a>
+          </div>
+
+          <div class="contact-line">
+            <strong>Professional interest</strong>
+            Technology & Data Analytics
+          </div>
+
+          <div class="contact-line">
+            <strong>Opportunity sought</strong>
+            Internship
+          </div>
+
+          <div class="contact-line">
+            <strong>Current status</strong>
+            Undergraduate student
+          </div>
+        </aside>
+      </section>
+
+      <!-- EDUCATION -->
+      <section id="education">
+        <div class="section-heading">
+          <span class="eyebrow">The academic timeline</span>
+          <h2>Education & <em>learning.</em></h2>
+        </div>
+
+        <div class="education-list">
+
+          <article class="education-item">
+            <div class="education-year">2013 – 2016</div>
+            <div>
+              <h3>Little Souls Primary School</h3>
+              <p>Primary education · Grades 1–4</p>
+            </div>
+            <span class="education-badge">Foundation</span>
+          </article>
+
+          <article class="education-item">
+            <div class="education-year">2017 – 2018</div>
+            <div>
+              <h3>Swaneng Primary School</h3>
+              <p>Primary education · Grades 5–6</p>
+            </div>
+            <span class="education-badge">Progress</span>
+          </article>
+
+          <article class="education-item">
+            <div class="education-year">2019</div>
+            <div>
+              <h3>Flowertown Primary School</h3>
+              <p>Grade 7 · Reported grade: B</p>
+            </div>
+            <span class="education-badge">Grade B</span>
+          </article>
+
+          <article class="education-item">
+            <div class="education-year">2020</div>
+            <div>
+              <h3>Pekenene Junior Secondary School</h3>
+              <p>Form 1</p>
+            </div>
+            <span class="education-badge">Secondary</span>
+          </article>
+
+          <article class="education-item">
+            <div class="education-year">2021 – 2022</div>
+            <div>
+              <h3>Mmaphula Junior Secondary School</h3>
+              <p>Forms 2–3 · Reported points: 39</p>
+            </div>
+            <span class="education-badge">39 points</span>
+          </article>
+
+          <article class="education-item">
+            <div class="education-year">2023 – 2024</div>
+            <div>
+              <h3>Lotsane Senior Secondary School</h3>
+              <p>Forms 4–5 · Reported points: 38</p>
+            </div>
+            <span class="education-badge">38 points</span>
+          </article>
+
+          <article class="education-item">
+            <div class="education-year">Present</div>
+            <div>
+              <h3>Bachelor's Degree Studies</h3>
+              <p>BIDA · First year</p>
+            </div>
+            <span class="education-badge">Undergraduate</span>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- QUALIFICATIONS AND EXPERIENCE -->
+      <section class="two-column">
+
+        <article class="info-panel">
+          <span class="eyebrow">Academic achievements</span>
+          <h3>Qualifications</h3>
+
+          <ul class="qualification-list">
+            <li><span class="check">✓</span><span>Primary School Leaving Examination (PSLE)</span></li>
+            <li><span class="check">✓</span><span>Junior Certificate Examination (JCE)</span></li>
+            <li><span class="check">✓</span><span>Botswana General Certificate of Secondary Education (BGCSE)</span></li>
+            <li><span class="check">✓</span><span>Currently pursuing a bachelor's degree in BIDA</span></li>
+          </ul>
+        </article>
+
+        <article class="info-panel soft">
+          <span class="eyebrow">Leadership & involvement</span>
+          <h3>Experience that counts.</h3>
+
+          <ul class="experience-list">
+            <li>
+              <span class="check">✦</span>
+              <div>
+                <strong>Student Representative Council (SRC)</strong>
+                <small>Member during senior school.</small>
+              </div>
+            </li>
+            <li>
+              <span class="check">✦</span>
+              <div>
+                <strong>Student leadership</strong>
+                <small>Reported role: Assistant Minister of Refactory. Title to be verified before formal submission.</small>
+              </div>
+            </li>
+            <li>
+              <span class="check">✦</span>
+              <div>
+                <strong>Employment history</strong>
+                <small>No formal employment experience reported. Seeking opportunities to gain practical experience.</small>
+              </div>
+            </li>
+          </ul>
+        </article>
+
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills">
+        <div class="section-heading">
+          <span class="eyebrow">What I bring to the table</span>
+          <h2>Skills & <em>strengths.</em></h2>
+        </div>
+
+        <div class="skills-grid">
+
+          <article class="skill-card">
+            <div class="skill-symbol">♧</div>
+            <h3>Teamwork</h3>
+            <p>I work well with others and value cooperation, communication and shared goals.</p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-symbol">◷</div>
+            <h3>Time Management</h3>
+            <p>I aim to meet deadlines, remain punctual and manage my time responsibly.</p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-symbol">✧</div>
+            <h3>Prioritisation</h3>
+            <p>I recognise the importance of handling essential tasks and organising my responsibilities.</p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-symbol">↗</div>
+            <h3>Adaptability</h3>
+            <p>I adapt to new situations and approach unfamiliar tasks with a willingness to learn.</p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-symbol">◎</div>
+            <h3>Attentiveness</h3>
+            <p>I pay attention to details, instructions and the needs of the people I work with.</p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-symbol">♡</div>
+            <h3>Empathy</h3>
+            <p>I value understanding others and contributing to a respectful working environment.</p>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- CAREER OBJECTIVE -->
+      <section class="career-card">
+        <div>
+          <span class="eyebrow">Where I am headed</span>
+          <h2>From curious student<br>to future founder.</h2>
+          <p>
+            My immediate goal is to secure an internship in the technology
+            sector, learn from experienced professionals and develop practical
+            skills. In the long term, I aim to become a data analyst and
+            establish my own data analytics firm.
+          </p>
+        </div>
+        <div class="career-icon" aria-hidden="true">✳</div>
+      </section>
+
+      <!-- ACTIONS -->
+      <div class="cv-actions">
+        <button class="button" onclick="window.print()">Print / Save as PDF ↗</button>
+        <a href="mailto:tinashepm2007@icloud.com" class="button button-outline">Contact me ✉</a>
+        <a href="index.html" class="button button-outline">← Back to homepage</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <a class="footer-brand" href="index.html">Tinashe<span>.</span></a>
+      <p>Personal portfolio · Built around growth and ambition · <span id="year"></span></p>
+      <div class="footer-links">
+        <a href="group-reflection.html">Group reflection</a>
+        <a href="study-resources.html">Study resources</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", function () {
+      const isOpen = navLinks.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+      );
+      menuToggle.textContent = isOpen ? "×" : "☰";
+    });
+
+    navLinks.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
