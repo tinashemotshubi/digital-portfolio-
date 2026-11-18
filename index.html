@@ -1,0 +1,1230 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#faf7f0">
+  <meta name="description" content="Discover the world of Tinashe Motshubi — a BIDA student, future data analyst and ambitious individual building his own kingdom.">
+  <title>Tinashe Motshubi | King of My Own World</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #faf7f0;
+      --white: #ffffff;
+      --lilac: #dfd0fa;
+      --purple: #8c6bc4;
+      --purple-dark: #554078;
+      --blue: #c8e5f5;
+      --yellow: #f6df91;
+      --silver: #d5d8df;
+      --ink: #30283b;
+      --muted: #746b7d;
+      --line: #e8e1eb;
+      --radius: 24px;
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "DM Sans", Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    button, a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .announcement {
+      padding: 9px 16px;
+      background: var(--purple-dark);
+      color: white;
+      text-align: center;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(250, 247, 240, 0.94);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: auto;
+      padding: 17px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      white-space: nowrap;
+    }
+
+    .brand span {
+      color: var(--purple);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 600;
+      transition: color 0.25s;
+    }
+
+    .nav-links a:hover {
+      color: var(--purple);
+    }
+
+    .nav-links .nav-cta {
+      padding: 10px 17px;
+      background: var(--ink);
+      color: white;
+      border-radius: 30px;
+    }
+
+    .nav-links .nav-cta:hover {
+      background: var(--purple);
+      color: white;
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      width: 43px;
+      height: 43px;
+      background: white;
+      color: var(--ink);
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .hero {
+      max-width: 1200px;
+      margin: auto;
+      padding: 72px 5% 90px;
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      align-items: center;
+      gap: 65px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--purple-dark);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2.4px;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 24px;
+      height: 2px;
+      background: var(--purple);
+    }
+
+    .hero h1 {
+      margin: 24px 0;
+      font-family: var(--serif);
+      font-size: clamp(52px, 7.3vw, 94px);
+      font-weight: 600;
+      letter-spacing: -4px;
+      line-height: 0.99;
+    }
+
+    .hero h1 .royal {
+      display: block;
+      color: var(--purple);
+      font-style: italic;
+    }
+
+    .hero h1 .world {
+      display: block;
+      font-size: 0.72em;
+      letter-spacing: -2px;
+    }
+
+    .hero-description {
+      max-width: 470px;
+      margin-bottom: 28px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .hero-description strong {
+      color: var(--ink);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 22px;
+      border: 1px solid var(--ink);
+      border-radius: 40px;
+      background: var(--ink);
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      transition: transform 0.25s, background 0.25s;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+      background: var(--purple-dark);
+    }
+
+    .button-outline {
+      background: transparent;
+      color: var(--ink);
+      border-color: var(--silver);
+    }
+
+    .button-outline:hover {
+      background: white;
+      color: var(--ink);
+    }
+
+    .hero-note {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .note-star {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--yellow);
+      color: var(--ink);
+      font-size: 18px;
+    }
+
+    .portrait-stage {
+      position: relative;
+      min-width: 0;
+      max-width: 440px;
+      width: 100%;
+      justify-self: center;
+      padding: 17px 17px 36px;
+      border-radius: 48% 48% 25px 25px;
+      background: var(--lilac);
+      transform: rotate(2deg);
+    }
+
+    .portrait-stage::before {
+      content: "";
+      position: absolute;
+      inset: 9px;
+      border: 1px solid rgba(85, 64, 120, 0.3);
+      border-radius: inherit;
+      pointer-events: none;
+    }
+
+    .portrait-stage::after {
+      content: "TM";
+      position: absolute;
+      right: -20px;
+      bottom: 55px;
+      width: 67px;
+      height: 67px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--yellow);
+      color: var(--ink);
+      border: 5px solid var(--cream);
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 700;
+      transform: rotate(-2deg);
+    }
+
+    .portrait-frame {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      border-radius: 46% 46% 15px 15px;
+      background: var(--blue);
+    }
+
+    .portrait-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.7s ease;
+    }
+
+    .portrait-stage:hover .portrait-frame img {
+      transform: scale(1.04);
+    }
+
+    .portrait-caption {
+      position: absolute;
+      z-index: 2;
+      left: 50%;
+      bottom: 8px;
+      width: 100%;
+      transform: translateX(-50%);
+      text-align: center;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--purple-dark);
+      text-transform: uppercase;
+    }
+
+    .floating-tag {
+      position: absolute;
+      z-index: 3;
+      padding: 11px 15px;
+      border: 1px solid rgba(255,255,255,0.7);
+      border-radius: 30px;
+      background: rgba(255,255,255,0.88);
+      box-shadow: 0 10px 30px rgba(48,40,59,0.08);
+      color: var(--ink);
+      font-size: 11px;
+      font-weight: 700;
+      transform: rotate(-2deg);
+    }
+
+    .tag-top {
+      top: 16%;
+      left: -38px;
+    }
+
+    .tag-bottom {
+      right: -30px;
+      bottom: 18%;
+      transform: rotate(3deg);
+    }
+
+    .marquee {
+      overflow: hidden;
+      padding: 17px 0;
+      background: var(--yellow);
+      color: var(--ink);
+    }
+
+    .marquee-track {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 25px;
+      min-width: max-content;
+      padding: 0 20px;
+      font-family: var(--serif);
+      font-size: 16px;
+      font-style: italic;
+    }
+
+    .marquee-track span {
+      white-space: nowrap;
+    }
+
+    .marquee-track b {
+      color: var(--purple-dark);
+      font-family: var(--sans);
+      font-size: 12px;
+    }
+
+    .section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 95px 5%;
+    }
+
+    .section-heading {
+      max-width: 700px;
+      margin-bottom: 42px;
+    }
+
+    .section-heading h2 {
+      margin: 13px 0;
+      font-family: var(--serif);
+      font-size: clamp(36px, 5vw, 57px);
+      font-weight: 500;
+      letter-spacing: -1.7px;
+      line-height: 1.15;
+    }
+
+    .section-heading h2 em {
+      color: var(--purple);
+      font-weight: 500;
+    }
+
+    .section-heading p {
+      max-width: 590px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .about-card {
+      padding: 35px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: white;
+    }
+
+    .about-card.featured {
+      background: var(--blue);
+      border-color: transparent;
+    }
+
+    .card-number {
+      margin-bottom: 15px;
+      color: var(--purple-dark);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .about-card h3 {
+      margin-bottom: 14px;
+      font-family: var(--serif);
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+    .about-card p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 2;
+    }
+
+    .about-card.featured p {
+      color: #4c5361;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 22px;
+    }
+
+    .tag {
+      padding: 8px 13px;
+      border: 1px solid var(--silver);
+      border-radius: 30px;
+      background: var(--cream);
+      color: var(--ink);
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .tag.purple {
+      background: var(--lilac);
+      border-color: transparent;
+    }
+
+    .vision-section {
+      padding: 75px 5%;
+      background: var(--lilac);
+    }
+
+    .vision-inner {
+      max-width: 1100px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .vision-inner .eyebrow {
+      justify-content: center;
+    }
+
+    .vision-inner h2 {
+      max-width: 850px;
+      margin: 20px auto;
+      font-family: var(--serif);
+      font-size: clamp(36px, 6vw, 67px);
+      font-weight: 500;
+      line-height: 1.15;
+      letter-spacing: -1.5px;
+    }
+
+    .vision-inner h2 em {
+      color: var(--purple-dark);
+    }
+
+    .vision-inner p {
+      max-width: 650px;
+      margin: auto;
+      color: #5b5269;
+      font-size: 14px;
+      line-height: 2;
+    }
+
+    .interests-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .interest-card {
+      min-height: 190px;
+      padding: 25px 20px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: white;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .interest-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 30px rgba(48,40,59,0.07);
+    }
+
+    .interest-icon {
+      display: grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      margin-bottom: 20px;
+      border-radius: 16px;
+      background: var(--lilac);
+      font-size: 22px;
+    }
+
+    .interest-card:nth-child(2) .interest-icon {
+      background: var(--blue);
+    }
+
+    .interest-card:nth-child(3) .interest-icon {
+      background: var(--yellow);
+    }
+
+    .interest-card:nth-child(4) .interest-icon {
+      background: #e6e8ed;
+    }
+
+    .interest-card h3 {
+      margin-bottom: 6px;
+      font-family: var(--serif);
+      font-size: 20px;
+    }
+
+    .interest-card p {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .journey-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 30px;
+      padding: 45px;
+      border-radius: 30px;
+      background: var(--ink);
+      color: white;
+    }
+
+    .journey-card h2 {
+      margin: 15px 0;
+      font-family: var(--serif);
+      font-size: clamp(32px, 4vw, 48px);
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .journey-card p {
+      color: #d4cedc;
+      font-size: 13px;
+      line-height: 2;
+    }
+
+    .journey-card .eyebrow {
+      color: var(--yellow);
+    }
+
+    .journey-card .eyebrow::before {
+      background: var(--yellow);
+    }
+
+    .journey-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .journey-item {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      padding: 15px;
+      border: 1px solid rgba(255,255,255,0.13);
+      border-radius: 15px;
+      background: rgba(255,255,255,0.05);
+      font-size: 12px;
+    }
+
+    .journey-item span {
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background: var(--lilac);
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .journey-item:nth-child(2) span {
+      background: var(--blue);
+    }
+
+    .journey-item:nth-child(3) span {
+      background: var(--yellow);
+    }
+
+    .contact-section {
+      padding: 75px 5%;
+      text-align: center;
+      background: var(--blue);
+    }
+
+    .contact-section h2 {
+      margin: 15px 0;
+      font-family: var(--serif);
+      font-size: clamp(38px, 6vw, 65px);
+      font-weight: 500;
+    }
+
+    .contact-section p {
+      margin: 0 auto 25px;
+      max-width: 550px;
+      color: #53616c;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .contact-section .button {
+      background: var(--ink);
+      border-color: var(--ink);
+    }
+
+    footer {
+      padding: 30px 5%;
+      background: var(--cream);
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .footer-inner p {
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .footer-brand {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .footer-brand span {
+      color: var(--purple);
+    }
+
+    .back-top {
+      display: inline-grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--silver);
+      border-radius: 50%;
+      background: white;
+      font-size: 18px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .nav-links {
+        gap: 12px;
+      }
+
+      .nav-links a {
+        font-size: 11px;
+      }
+
+      .hero {
+        gap: 35px;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+      .interests-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .announcement {
+        font-size: 9px;
+        letter-spacing: 1.3px;
+      }
+
+      .nav-inner {
+        padding: 13px 5%;
+      }
+
+      .brand {
+        font-size: 20px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 20px 5% 25px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: var(--cream);
+        border-bottom: 1px solid var(--line);
+        box-shadow: 0 15px 25px rgba(48,40,59,0.06);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 12px 0;
+        font-size: 13px;
+      }
+
+      .nav-links .nav-cta {
+        margin-top: 8px;
+        padding: 12px 17px;
+        text-align: center;
+      }
+
+      .hero {
+        padding-top: 52px;
+        padding-bottom: 65px;
+        grid-template-columns: 1fr;
+        gap: 42px;
+      }
+
+      .hero h1 {
+        font-size: clamp(53px, 13vw, 79px);
+      }
+
+      .hero-description {
+        font-size: 14px;
+      }
+
+      .portrait-stage {
+        width: 85%;
+        max-width: 370px;
+      }
+
+      .tag-top {
+        left: -22px;
+      }
+
+      .tag-bottom {
+        right: -20px;
+      }
+
+      .section {
+        padding-top: 70px;
+        padding-bottom: 70px;
+      }
+
+      .about-grid,
+      .journey-card {
+        grid-template-columns: 1fr;
+      }
+
+      .about-card {
+        padding: 27px;
+      }
+
+      .journey-card {
+        padding: 28px;
+      }
+
+      .interests-grid {
+        gap: 12px;
+      }
+
+      .interest-card {
+        min-height: 175px;
+        padding: 20px 15px;
+      }
+
+      .interest-card h3 {
+        font-size: 18px;
+      }
+
+      .footer-inner {
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .hero h1 {
+        font-size: 48px;
+      }
+
+      .interests-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body id="top">
+
+  <div class="announcement">
+    A little different. A little daring. Entirely me. ✦
+  </div>
+
+  <header class="navbar">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a href="index.html" class="brand">Tinashe<span>.</span></a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="navLinks"
+      >☰</button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About me</a>
+        <a href="#interests">My world</a>
+        <a href="#vision">My vision</a>
+        <a href="cv.html">My CV</a>
+        <a href="individual-reflection.html">Reflections</a>
+        <a href="skills-projects.html" class="nav-cta">My journey ↗</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO / HOMEPAGE -->
+    <section class="hero">
+      <div class="hero-content reveal">
+        <span class="eyebrow">Welcome to my universe</span>
+
+        <h1>
+          I'M A
+          <span class="royal">KING.</span>
+          <span class="world">IN MY OWN WORLD.</span>
+        </h1>
+
+        <p class="hero-description">
+          Hey, I'm <strong>Tinashe Motshubi.</strong> A first-year BIDA student,
+          a curious thinker, an easygoing soul and a young man with a vision.
+          I'm here to learn, grow, challenge myself and build a future that
+          reflects exactly who I am.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#about" class="button">Get to know me <span>↗</span></a>
+          <a href="cv.html" class="button button-outline">Explore my CV</a>
+        </div>
+
+        <div class="hero-note">
+          <span class="note-star">✳</span>
+          <span>Big dreams. Kind heart. Unapologetically myself.</span>
+        </div>
+      </div>
+
+      <div class="portrait-stage reveal">
+        <div class="portrait-frame">
+          <img
+            src="images/tinashe.JPG"
+            alt="Portrait of Tinashe Motshubi"
+            fetchpriority="high"
+          >
+        </div>
+
+        <div class="portrait-caption">The face behind the vision</div>
+
+        <div class="floating-tag tag-top">✦ Future data analyst</div>
+        <div class="floating-tag tag-bottom">♛ Main character energy</div>
+      </div>
+    </section>
+
+    <!-- PERSONAL BRAND STRIP -->
+    <div class="marquee" aria-label="Personal values">
+      <div class="marquee-track">
+        <span>Curiosity first</span><b>✳</b>
+        <span>Kindness always</span><b>✳</b>
+        <span>Big vision</span><b>✳</b>
+        <span>Data with purpose</span><b>✳</b>
+        <span>My world, my rules</span><b>✳</b>
+        <span>Curiosity first</span><b>✳</b>
+        <span>Kindness always</span><b>✳</b>
+      </div>
+    </div>
+
+    <!-- ABOUT ME -->
+    <section class="section" id="about">
+      <div class="section-heading reveal">
+        <span class="eyebrow">Chapter one · The introduction</span>
+        <h2>More than a name.<br><em>A whole personality.</em></h2>
+        <p>
+          Every person has a story beyond their qualifications.
+          Mine is about curiosity, connection, self-discovery and the courage
+          to imagine a future bigger than where I am today.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <article class="about-card featured reveal">
+          <div class="card-number">01 / THE PERSON</div>
+          <h3>Easygoing by nature. Curious by default.</h3>
+          <p>
+            I'm quirky, easygoing and empathetic. I appreciate different
+            perspectives and believe that understanding people is just as
+            important as understanding problems. I enjoy being myself,
+            connecting with others and learning from the world around me.
+          </p>
+
+          <div class="tag-list">
+            <span class="tag">Quirky</span>
+            <span class="tag">Easygoing</span>
+            <span class="tag">Empathetic</span>
+            <span class="tag">Curious</span>
+          </div>
+        </article>
+
+        <article class="about-card reveal">
+          <div class="card-number">02 / THE STUDENT</div>
+          <h3>Learning today. Building tomorrow.</h3>
+          <p>
+            I'm currently pursuing a bachelor's degree in BIDA and developing
+            the knowledge, discipline and problem-solving abilities that will
+            help me turn ideas into practical solutions.
+          </p>
+
+          <div class="tag-list">
+            <span class="tag purple">BIDA</span>
+            <span class="tag">Year One</span>
+            <span class="tag">Technology</span>
+            <span class="tag">Problem-solving</span>
+          </div>
+        </article>
+
+        <article class="about-card reveal">
+          <div class="card-number">03 / THE THINKER</div>
+          <h3>Fascinated by how things work.</h3>
+          <p>
+            Biology and chemistry interest me because they reveal the patterns,
+            relationships and processes behind the world we live in.
+            That curiosity also inspires me to explore analytical thinking
+            and the power of information.
+          </p>
+
+          <div class="tag-list">
+            <span class="tag">Biology</span>
+            <span class="tag">Chemistry</span>
+            <span class="tag purple">Analytical thinking</span>
+          </div>
+        </article>
+
+        <article class="about-card reveal">
+          <div class="card-number">04 / THE VALUES</div>
+          <h3>Success with substance.</h3>
+          <p>
+            I want to grow into someone who is capable, dependable and
+            considerate. For me, ambition is not only about reaching the top;
+            it's also about how I treat people, what I learn along the way
+            and the positive difference I can make.
+          </p>
+
+          <div class="tag-list">
+            <span class="tag">Empathy</span>
+            <span class="tag">Growth</span>
+            <span class="tag">Discipline</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PERSONAL VISION -->
+    <section class="vision-section" id="vision">
+      <div class="vision-inner reveal">
+        <span class="eyebrow">The bigger picture</span>
+        <h2>I'm not just dreaming of a seat at the table.<br><em>I'm building my own.</em></h2>
+        <p>
+          My goal is to become a data analyst and eventually establish my own
+          data analytics firm. I want to transform information into insights,
+          solve meaningful problems and build something that carries my name,
+          values and vision.
+        </p>
+      </div>
+    </section>
+
+    <!-- INTERESTS -->
+    <section class="section" id="interests">
+      <div class="section-heading reveal">
+        <span class="eyebrow">Outside the classroom</span>
+        <h2>Welcome to <em>my world.</em></h2>
+        <p>
+          There's more to me than studying and career goals.
+          These are some of the interests that help me recharge,
+          stay curious and enjoy the journey.
+        </p>
+      </div>
+
+      <div class="interests-grid">
+        <article class="interest-card reveal">
+          <div class="interest-icon">🧬</div>
+          <h3>Biology</h3>
+          <p>Exploring living systems and the science behind life.</p>
+        </article>
+
+        <article class="interest-card reveal">
+          <div class="interest-icon">⚗️</div>
+          <h3>Chemistry</h3>
+          <p>Discovering reactions, patterns and the building blocks of matter.</p>
+        </article>
+
+        <article class="interest-card reveal">
+          <div class="interest-icon">🎾</div>
+          <h3>Tennis</h3>
+          <p>Enjoying movement, focus and the challenge of the game.</p>
+        </article>
+
+        <article class="interest-card reveal">
+          <div class="interest-icon">🏊</div>
+          <h3>Swimming</h3>
+          <p>Making time for movement, balance and a refreshing reset.</p>
+        </article>
+      </div>
+
+      <div class="about-card reveal" style="margin-top: 18px;">
+        <div class="card-number">A LITTLE EXTRA ABOUT ME</div>
+        <h3>Sometimes, the best ideas arrive on a walk.</h3>
+        <p>
+          I love going on walks, taking a break from the noise and enjoying
+          the world around me. Those quieter moments are a reminder that
+          personal growth isn't always loud; sometimes it happens one step
+          at a time.
+        </p>
+      </div>
+    </section>
+
+    <!-- FUTURE JOURNEY -->
+    <section class="section" style="padding-top: 0;">
+      <div class="journey-card reveal">
+        <div>
+          <span class="eyebrow">The next chapters</span>
+          <h2>The crown is a mindset.<br>The work is the legacy.</h2>
+          <p>
+            I'm still learning, still discovering and still finding new
+            ways to improve. This portfolio documents my progress as a
+            student, collaborator and future professional.
+          </p>
+        </div>
+
+        <div class="journey-list">
+          <div class="journey-item">
+            <span>01</span>
+            <div><strong>Learn</strong><br>Build knowledge and strong foundations.</div>
+          </div>
+
+          <div class="journey-item">
+            <span>02</span>
+            <div><strong>Apply</strong><br>Develop skills through practical work.</div>
+          </div>
+
+          <div class="journey-item">
+            <span>03</span>
+            <div><strong>Build</strong><br>Grow into a data analyst and future founder.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+      <div class="reveal">
+        <span class="eyebrow">Let's connect</span>
+        <h2>Good things start<br>with a conversation.</h2>
+        <p>
+          Whether it's an opportunity to learn, collaborate or exchange ideas,
+          I'm always open to meaningful connections and new possibilities.
+        </p>
+        <a href="mailto:tinashepm2007@icloud.com" class="button">
+          Email Tinashe ↗
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <a href="#top" class="footer-brand">Tinashe<span>.</span></a>
+      <p>Designed with individuality, ambition and a little royal energy. © <span id="year"></span></p>
+      <a href="#top" class="back-top" aria-label="Back to top">↑</a>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", function () {
+      const isOpen = navLinks.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+      );
+      menuToggle.textContent = isOpen ? "×" : "☰";
+    });
+
+    navLinks.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const revealItems = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      revealItems.forEach(function (item) {
+        observer.observe(item);
+      });
+    } else {
+      revealItems.forEach(function (item) {
+        item.classList.add("visible");
+      });
+    }
+  </script>
+
+</body>
+</html>
