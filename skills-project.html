@@ -1,0 +1,1039 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tinashe Motshubi's skills, interests, developing abilities and career ambitions in data analytics.">
+  <title>Skills & Projects | Tinashe Motshubi</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #fffdf8;
+      --white: #ffffff;
+      --purple: #7852a9;
+      --purple-dark: #573a80;
+      --lilac: #eee5fa;
+      --blue: #e8f2fb;
+      --yellow: #fff4c9;
+      --silver: #e7e3ec;
+      --text: #393343;
+      --muted: #777181;
+      --shadow: 0 12px 35px rgba(84, 61, 112, 0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .top-strip {
+      height: 6px;
+      background: linear-gradient(
+        90deg,
+        #bca1e6,
+        #d9c8f0,
+        #c6dfef,
+        #f5e4a9,
+        #bca1e6
+      );
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 253, 248, 0.97);
+      border-bottom: 1px solid var(--silver);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .brand {
+      font-family: "Playfair Display", serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--purple-dark);
+      white-space: nowrap;
+    }
+
+    .brand span {
+      color: #ad8bd5;
+    }
+
+    .menu-toggle {
+      display: none;
+      padding: 8px 12px;
+      background: white;
+      border: 1px solid var(--silver);
+      border-radius: 10px;
+      font: inherit;
+      color: var(--purple-dark);
+      cursor: pointer;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 6px;
+    }
+
+    nav a {
+      padding: 8px 10px;
+      border-radius: 30px;
+      font-size: 0.77rem;
+      font-weight: 600;
+      transition: 0.25s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: var(--lilac);
+      color: var(--purple-dark);
+    }
+
+    .hero {
+      max-width: 1200px;
+      margin: auto;
+      padding: 85px 6% 75px;
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: var(--yellow);
+      padding: 7px 15px;
+      border-radius: 30px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Playfair Display", serif;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      color: var(--purple-dark);
+      letter-spacing: -2px;
+      margin-bottom: 23px;
+    }
+
+    h1 em {
+      color: #a585ce;
+      font-weight: 500;
+    }
+
+    .hero p {
+      max-width: 620px;
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
+
+    .hero-art {
+      min-height: 350px;
+      border-radius: 38px;
+      padding: 28px;
+      background:
+        radial-gradient(circle at 80% 15%, #fff4c9 0 11%, transparent 11.5%),
+        radial-gradient(circle at 15% 85%, #d8eaf8 0 16%, transparent 16.5%),
+        linear-gradient(145deg, #f0e7fb, #fffdf8);
+      border: 1px solid #e6dcef;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transform: rotate(1deg);
+    }
+
+    .art-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--purple);
+      text-transform: uppercase;
+    }
+
+    .art-center {
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .art-symbol {
+      font-size: 4.7rem;
+      color: var(--purple);
+      line-height: 1.2;
+    }
+
+    .art-center h2 {
+      color: var(--purple-dark);
+      font-size: 2rem;
+      margin-top: 12px;
+    }
+
+    .art-center p {
+      font-size: 0.86rem;
+      margin: 8px auto 0;
+      max-width: 260px;
+    }
+
+    .art-bottom {
+      align-self: flex-end;
+      background: white;
+      border: 1px solid var(--silver);
+      padding: 10px 15px;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--purple-dark);
+    }
+
+    .section {
+      padding: 75px 6%;
+    }
+
+    .section-inner {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-heading {
+      max-width: 720px;
+      margin: 0 auto 42px;
+      text-align: center;
+    }
+
+    .section-heading span {
+      color: var(--purple);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    .section-heading h2 {
+      color: var(--purple-dark);
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      margin: 12px 0 16px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    .skills-section {
+      background: #f7f2fc;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .skill-card {
+      padding: 28px;
+      border-radius: 23px;
+      background: white;
+      border: 1px solid var(--silver);
+      box-shadow: var(--shadow);
+      transition: transform 0.25s;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .skill-icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      background: var(--lilac);
+      border-radius: 15px;
+      font-size: 1.35rem;
+      margin-bottom: 20px;
+    }
+
+    .skill-card:nth-child(3n + 2) .skill-icon {
+      background: var(--blue);
+    }
+
+    .skill-card:nth-child(3n) .skill-icon {
+      background: var(--yellow);
+    }
+
+    .skill-card h3 {
+      font-size: 1.35rem;
+      color: var(--purple-dark);
+      margin-bottom: 12px;
+    }
+
+    .skill-card p {
+      font-size: 0.91rem;
+      color: var(--muted);
+    }
+
+    .interests-layout {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 45px;
+      align-items: start;
+    }
+
+    .interests-intro h2 {
+      color: var(--purple-dark);
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      margin-bottom: 18px;
+    }
+
+    .interests-intro p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .interest-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .interest-item {
+      min-height: 150px;
+      border: 1px solid var(--silver);
+      border-radius: 20px;
+      padding: 23px;
+      background: white;
+    }
+
+    .interest-item:nth-child(2) {
+      background: var(--blue);
+    }
+
+    .interest-item:nth-child(3) {
+      background: var(--yellow);
+    }
+
+    .interest-item:nth-child(4) {
+      background: var(--lilac);
+    }
+
+    .interest-item .emoji {
+      display: block;
+      font-size: 1.7rem;
+      margin-bottom: 10px;
+    }
+
+    .interest-item h3 {
+      font-size: 1.2rem;
+      color: var(--purple-dark);
+      margin-bottom: 6px;
+    }
+
+    .interest-item p {
+      font-size: 0.83rem;
+      color: var(--muted);
+    }
+
+    .projects-section {
+      background: var(--blue);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .project-card {
+      background: white;
+      border: 1px solid #d8e6f3;
+      border-radius: 24px;
+      padding: 32px;
+    }
+
+    .project-number {
+      color: #a18abf;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .project-card h3 {
+      font-size: 1.6rem;
+      color: var(--purple-dark);
+      margin: 13px 0;
+    }
+
+    .project-card p {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-bottom: 18px;
+    }
+
+    .project-tag {
+      display: inline-block;
+      background: var(--lilac);
+      color: var(--purple-dark);
+      padding: 6px 11px;
+      border-radius: 20px;
+      margin: 3px 4px 3px 0;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    .project-note {
+      max-width: 850px;
+      margin: 30px auto 0;
+      padding: 18px 22px;
+      border-radius: 15px;
+      background: var(--yellow);
+      color: #67552a;
+      font-size: 0.88rem;
+    }
+
+    .career-section {
+      background: var(--cream);
+    }
+
+    .career-panel {
+      background: white;
+      border: 1px solid var(--silver);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .career-copy {
+      padding: 42px;
+    }
+
+    .career-copy h2 {
+      color: var(--purple-dark);
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      margin-bottom: 20px;
+    }
+
+    .career-copy p {
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .career-quote {
+      padding: 42px;
+      background: var(--lilac);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .career-quote .quote-mark {
+      font-family: "Playfair Display", serif;
+      font-size: 4.5rem;
+      line-height: 1;
+      color: #a585ce;
+    }
+
+    .career-quote blockquote {
+      font-family: "Playfair Display", serif;
+      font-size: 1.7rem;
+      color: var(--purple-dark);
+      margin: 10px 0 22px;
+    }
+
+    .career-quote p {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .development-section {
+      background: #f7f2fc;
+    }
+
+    .development-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .development-card {
+      background: white;
+      border: 1px solid var(--silver);
+      border-radius: 22px;
+      padding: 30px;
+    }
+
+    .development-card h3 {
+      font-size: 1.45rem;
+      color: var(--purple-dark);
+      margin-bottom: 18px;
+    }
+
+    .development-card ul {
+      list-style: none;
+    }
+
+    .development-card li {
+      padding: 12px 0 12px 28px;
+      border-bottom: 1px solid #f0edf4;
+      position: relative;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .development-card li:last-child {
+      border-bottom: none;
+    }
+
+    .development-card li::before {
+      content: "✦";
+      position: absolute;
+      left: 3px;
+      color: var(--purple);
+    }
+
+    .closing {
+      text-align: center;
+      padding: 80px 6%;
+    }
+
+    .closing h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--purple-dark);
+      margin-bottom: 18px;
+    }
+
+    .closing p {
+      max-width: 680px;
+      margin: auto;
+      color: var(--muted);
+    }
+
+    .next-link {
+      display: inline-block;
+      margin-top: 28px;
+      background: var(--purple);
+      color: white;
+      padding: 13px 24px;
+      border-radius: 30px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      transition: 0.25s;
+    }
+
+    .next-link:hover {
+      background: var(--purple-dark);
+      transform: translateY(-2px);
+    }
+
+    footer {
+      border-top: 1px solid var(--silver);
+      padding: 28px 6%;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    footer strong {
+      color: var(--purple);
+    }
+
+    @media (max-width: 900px) {
+      .nav-container {
+        flex-wrap: wrap;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      nav.open {
+        display: flex;
+      }
+
+      nav a {
+        padding: 10px 13px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .hero-art {
+        max-width: 600px;
+        width: 100%;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .interests-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .career-panel {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .section {
+        padding: 55px 6%;
+      }
+
+      .skills-grid,
+      .projects-grid,
+      .development-grid,
+      .interest-list {
+        grid-template-columns: 1fr;
+      }
+
+      .career-copy,
+      .career-quote {
+        padding: 28px 24px;
+      }
+
+      h1 {
+        letter-spacing: -1px;
+      }
+
+      .hero-art {
+        min-height: 300px;
+      }
+    }
+
+    @media print {
+      header,
+      .top-strip,
+      .menu-toggle,
+      .next-link {
+        display: none !important;
+      }
+
+      body {
+        background: white;
+      }
+
+      .section,
+      .hero,
+      .closing {
+        padding: 25px 0;
+      }
+
+      .skill-card,
+      .project-card,
+      .career-panel,
+      .development-card {
+        box-shadow: none;
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top-strip"></div>
+
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="brand">Tinashe<span>.</span></a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        ☰ Menu
+      </button>
+
+      <nav id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="cv.html">CV</a>
+        <a href="individual-reflection.html">Individual Reflection</a>
+        <a href="group-reflection.html">Group Reflection</a>
+        <a href="skills-projects.html" class="active">Skills & Projects</a>
+        <a href="application-letter.html">Application Letter</a>
+        <a href="email-template.html">Email Template</a>
+        <a href="study-resources.html">Study Resources</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <span class="eyebrow">My Skills · My Interests · My Future</span>
+
+        <h1>Built on <em>Potential.</em></h1>
+
+        <p>
+          I am Tinashe Motshubi, a first-year student with a curious mind,
+          an easygoing personality and a strong interest in understanding
+          how things work. I enjoy learning, adapting to new situations and
+          working with others. My goal is to turn these qualities into
+          practical abilities that will support my journey into data analytics.
+        </p>
+      </div>
+
+      <div class="hero-art">
+        <span class="art-label">The Bigger Picture</span>
+
+        <div class="art-center">
+          <div class="art-symbol">✧</div>
+          <h2>Think. Learn. Build.</h2>
+          <p>
+            Developing the mindset and skills to turn information into
+            meaningful insights.
+          </p>
+        </div>
+
+        <span class="art-bottom">Future Data Analyst ↗</span>
+      </div>
+    </section>
+
+    <section class="section skills-section">
+      <div class="section-inner">
+        <div class="section-heading">
+          <span>01 · What I Bring</span>
+          <h2>My Personal Strengths</h2>
+          <p>
+            Skills are built through practice, responsibility and a willingness
+            to improve. These are qualities I bring to my studies and group work.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card">
+            <div class="skill-icon">◎</div>
+            <h3>Teamwork</h3>
+            <p>
+              I work well with other people and recognise the value of
+              combining different perspectives to achieve a shared goal.
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-icon">◷</div>
+            <h3>Time Management</h3>
+            <p>
+              I aim to meet deadlines, remain punctual and organise tasks
+              according to their importance and urgency.
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-icon">↗</div>
+            <h3>Adaptability</h3>
+            <p>
+              I am willing to adjust to new situations, learn unfamiliar
+              things and approach challenges with an open mind.
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-icon">♡</div>
+            <h3>Empathy</h3>
+            <p>
+              I value understanding other people's perspectives and treating
+              others with consideration during discussions and teamwork.
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-icon">✦</div>
+            <h3>Attention to Detail</h3>
+            <p>
+              I understand the importance of paying attention to instructions,
+              checking my work and completing tasks carefully.
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-icon">◇</div>
+            <h3>Willingness to Learn</h3>
+            <p>
+              I am open to feedback and new knowledge because I know that
+              personal and professional growth requires continuous learning.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-inner interests-layout">
+        <div class="interests-intro">
+          <span class="eyebrow">02 · Beyond the Classroom</span>
+          <h2>A Mind with More Than One Interest.</h2>
+
+          <p>
+            My interests give me different ways to stay curious, active and
+            balanced. They also reflect my enjoyment of learning about the
+            world and challenging myself.
+          </p>
+
+          <p>
+            I believe that personal interests can support academic growth
+            by encouraging discipline, observation, curiosity and a healthy
+            balance between work and leisure.
+          </p>
+        </div>
+
+        <div class="interest-list">
+          <article class="interest-item">
+            <span class="emoji">⚗</span>
+            <h3>Biology</h3>
+            <p>
+              Exploring living systems and developing a better understanding
+              of the natural world.
+            </p>
+          </article>
+
+          <article class="interest-item">
+            <span class="emoji">🧪</span>
+            <h3>Chemistry</h3>
+            <p>
+              Learning about substances, reactions and the science behind
+              everyday processes.
+            </p>
+          </article>
+
+          <article class="interest-item">
+            <span class="emoji">🎾</span>
+            <h3>Tennis</h3>
+            <p>
+              Enjoying a sport that encourages focus, patience and strategic
+              thinking.
+            </p>
+          </article>
+
+          <article class="interest-item">
+            <span class="emoji">🌊</span>
+            <h3>Swimming & Walking</h3>
+            <p>
+              Staying active, clearing my mind and making time for personal
+              wellbeing.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects-section">
+      <div class="section-inner">
+        <div class="section-heading">
+          <span>03 · Learning in Action</span>
+          <h2>Projects & Practical Development</h2>
+          <p>
+            Practical projects are a way to apply classroom knowledge,
+            explore new tools and develop confidence through experience.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <span class="project-number">PROJECT IDEA 01</span>
+            <h3>Student Performance Analysis</h3>
+            <p>
+              A potential project to explore a sample dataset of student
+              marks, calculate averages and identify patterns in academic
+              performance. The aim would be to present the findings clearly
+              using tables or charts.
+            </p>
+            <span class="project-tag">Data Analysis</span>
+            <span class="project-tag">Statistics</span>
+            <span class="project-tag">Visualisation</span>
+          </article>
+
+          <article class="project-card">
+            <span class="project-number">PROJECT IDEA 02</span>
+            <h3>Personal Budget Tracker</h3>
+            <p>
+              A proposed tracker for recording income and expenses, grouping
+              spending categories and summarising monthly totals. It could
+              help demonstrate how organised data supports everyday decisions.
+            </p>
+            <span class="project-tag">Organisation</span>
+            <span class="project-tag">Spreadsheets</span>
+            <span class="project-tag">Problem-Solving</span>
+          </article>
+        </div>
+
+        <div class="project-note">
+          <strong>Portfolio note:</strong> These are proposed project ideas,
+          not claims of completed work. Once I complete a real project, I can
+          replace each description with the actual problem, tools used, process,
+          results and lessons learned.
+        </div>
+      </div>
+    </section>
+
+    <section class="section career-section">
+      <div class="section-inner">
+        <div class="career-panel">
+          <div class="career-copy">
+            <span class="eyebrow">04 · The Bigger Vision</span>
+            <h2>From Curiosity to a Career in Data.</h2>
+
+            <p>
+              My career ambition is to become a data analyst. I want to learn
+              how to collect, organise, analyse and interpret data so that
+              useful information can support better decisions.
+            </p>
+
+            <p>
+              I also aspire to establish my own data analytics firm in the
+              future. Building towards that goal will require technical
+              knowledge, communication, problem-solving, professionalism
+              and an understanding of the needs of clients.
+            </p>
+
+            <p>
+              As I progress through my studies, I intend to strengthen my
+              foundations, gain practical experience and gradually build
+              a portfolio of work that demonstrates my abilities.
+            </p>
+          </div>
+
+          <div class="career-quote">
+            <div class="quote-mark">“</div>
+            <blockquote>
+              I want to understand the story behind the numbers.
+            </blockquote>
+            <p>
+              My long-term direction is to turn data into insights that
+              people and organisations can use.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section development-section">
+      <div class="section-inner">
+        <div class="section-heading">
+          <span>05 · My Next Steps</span>
+          <h2>Skills I Want to Develop</h2>
+          <p>
+            I am at the beginning of my journey, so my focus is on building
+            strong foundations before advancing to more complex projects.
+          </p>
+        </div>
+
+        <div class="development-grid">
+          <article class="development-card">
+            <h3>Technical Development</h3>
+            <ul>
+              <li>Build confidence in spreadsheets and data organisation.</li>
+              <li>Develop statistical and analytical foundations.</li>
+              <li>Learn programming tools used in data analysis.</li>
+              <li>Practise presenting findings through clear charts and reports.</li>
+              <li>Work with sample datasets to gain practical experience.</li>
+            </ul>
+          </article>
+
+          <article class="development-card">
+            <h3>Professional Development</h3>
+            <ul>
+              <li>Strengthen written and verbal communication.</li>
+              <li>Continue improving teamwork and collaboration.</li>
+              <li>Manage deadlines and responsibilities consistently.</li>
+              <li>Seek constructive feedback and learn from mistakes.</li>
+              <li>Explore internship opportunities in the technology sector.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <span class="eyebrow">Still Becoming</span>
+      <h2>Potential Is Only the Beginning.</h2>
+
+      <p>
+        I see my first year as the foundation of a much larger journey.
+        By staying curious, developing my skills and learning from each
+        experience, I hope to grow into a capable data analyst and
+        eventually build a business of my own.
+      </p>
+
+      <a href="application-letter.html" class="next-link">
+        Continue to My Application Letter →
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Tinashe Motshubi</strong> · Digital Learning Portfolio</p>
+    <p>Curious mind. Clear direction. Continuous growth.</p>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
+
+    menuToggle.addEventListener("click", function () {
+      const isOpen = mainNav.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", isOpen);
+    });
+
+    mainNav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        mainNav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  </script>
+</body>
+</html>
